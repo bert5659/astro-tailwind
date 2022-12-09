@@ -74,8 +74,8 @@ module.exports = {
     },
     fontFamily: {
       button: "Roboto",
-      text123: "Poppins, sans-serif",
-      links: "Inter', sans-serif",
+      text: "Poppins",
+      links: 'Inter', sans-serif,
     },
   },
   plugins: [],
