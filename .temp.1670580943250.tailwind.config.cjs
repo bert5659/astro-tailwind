@@ -55,23 +55,11 @@ module.exports = {
       deskP: ["16px", { lineHeight: "125%" }],
       deskButtonPrimary: ["32px", { lineHeight: "33px" }],
       deskButtonSecondary: ["16px", { lineHeight: "100%" }],
-      mobileH1: ["32px", { lineHeight: "125%" }],
-      mobileH2: ["28px", { lineHeight: "125%" }],
-      mobileH3: ["26px", { lineHeight: "125%" }],
-      mobileH4: ["20px", { lineHeight: "125%" }],
-      mobileH5: ["18px", { lineHeight: "125%" }],
-      mobileP: ["18px", { lineHeight: "125%" }],
     },
-    spacing: {
-      space10: "0.625rem",
-      space15: "0.9375rem",
-      space20: "1.25rem",
-      space25: "1.5rem",
-      space30: "1.875rem",
-      space40: "2.5rem",
-      space80: "5rem",
-      space160: "5rem",
-    },
+	spacing: {
+		space10: {"0.625rem"},
+		space15: {"0.625rem"},
+	}
   },
   plugins: [],
 };
