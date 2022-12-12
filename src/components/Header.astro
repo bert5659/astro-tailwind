@@ -1,7 +1,11 @@
 <header>
   <nav class="navbar flex items-center justify-between">
-    <div class="logo w-[45px] sm:w-[70px]">
-      <img src="../img/logo.svg" alt="firma logo" />
+    <div class="logo">
+      <img
+        class="w-[45px] sm:w-[70px]"
+        src="../img/logo.svg"
+        alt="firma logo"
+      />
     </div>
     <div class="navbar-links flex w-full">
       <ul class="font-text text-black600 w-full flex justify-around font-bold">
@@ -25,23 +29,16 @@
   </nav>
 </header>
 
-<nav
-  id="full_screen_nav"
-  class="outline bg-inherit flex items-center justify-center"
->
-  <div class="flex">
-    <ul
-      class="font-text menu-items text-black600 w-full flex flex-col items-center font-bold"
-    >
-      <li><a class="menu-item" href="#">Shop</a></li>
-      <li><a class="menu-item" href="#">Abonnement</a></li>
-      <li><a class="menu-item" href="#">Arrangementer</a></li>
-      <li><a class="menu-item" href="#">Ciderskolen</a></li>
-      <li><a class="menu-item" href="#">Om os</a></li>
-      <li><a class="menu-item" href="#">For virksomheder</a></li>
-    </ul>
+<nav id="full_screen_nav" class="bg-inherit relative">
+  <div id="menu-items" class="z-10">
+    <a class="menu-item" href="#">Shop</a>
+    <a class="menu-item" href="#">Abonnement</a>
+    <a class="menu-item" href="#">Arrangementer</a>
+    <a class="menu-item" href="#">Ciderskolen</a>
+    <a class="menu-item" href="#">Om os</a>
+    <a class="menu-item" href="#">For virksomheder</a>
   </div>
-  <div class="logo w-[100px]">
-    <img src="../img/logo.svg" alt="firma logo" />
+  <div class="logo_full_nav z-20">
+    <img class="w-[200px]" src="../img/logo.svg" alt="firma logo" />
   </div>
 </nav>
