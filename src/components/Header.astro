@@ -1,22 +1,47 @@
 <header>
-  <div class="topnav" id="myTopnav">
-    <div class="logo">
-      <img class="w-[73px]" src="../img/logo.svg" alt="logo" />
+  <nav class="navbar flex items-center justify-between">
+    <div class="logo w-[45px] sm:w-[70px]">
+      <img src="../img/logo.svg" alt="firma logo" />
     </div>
-    <a href="#shop">Shop</a>
-    <a href="#abonnement">Abonnement</a>
-    <a href="#arrangementer">Arrangementer</a>
-    <a href="#ciderskolen">Ciderskolen</a>
-    <a href="#omOs">Om os</a>
-    <a href="#forVirksomheder">For virksomheder</a>
-    <a href="#profil"
-      ><img class="w-[37px]" src="../img/profil.svg" alt="profil ikon" />
+    <div class="navbar-links flex w-full">
+      <ul class="font-text text-black600 w-full flex justify-around font-bold">
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Abonnement</a></li>
+        <li><a href="#">Arrangementer</a></li>
+        <li><a href="#">Ciderskolen</a></li>
+        <li><a href="#">Om os</a></li>
+        <li><a href="#">For virksomheder</a></li>
+      </ul>
+    </div>
+    <div class="nav-icon-wrapper gap-space40 flex">
+      <img class="w-[37px]" src="../img/profil.svg" alt="ikoner" />
+      <img class="w-[37px]" src="../img/kurv.svg" alt="kurv" />
+    </div>
+    <a href="#" class="toggle-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </a>
-    <a href="#profil"
-      ><img class="w-[37px]" src="../img/kurv.svg" alt="kurv ikon" />
-    </a>
-    <a id="icon123" class="icon">
-      <i>BurgermenuIkon</i>
-    </a>
-  </div>
+  </nav>
 </header>
+
+<nav
+  id="full_screen_nav"
+  class="outline bg-inherit flex items-center justify-center"
+>
+  <div class="flex">
+    <ul
+      class="font-text menu-items text-black600 w-full flex flex-col items-center font-bold"
+    >
+      <li><a class="menu-item" href="#">Shop</a></li>
+      <li><a class="menu-item" href="#">Abonnement</a></li>
+      <li><a class="menu-item" href="#">Arrangementer</a></li>
+      <li><a class="menu-item" href="#">Ciderskolen</a></li>
+      <li><a class="menu-item" href="#">Om os</a></li>
+      <li><a class="menu-item" href="#">For virksomheder</a></li>
+    </ul>
+  </div>
+  <div class="logo w-[100px]">
+    <img src="../img/logo.svg" alt="firma logo" />
+  </div>
+</nav>
