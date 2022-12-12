@@ -63,6 +63,8 @@ module.exports = {
       mobileP: ["18px", { lineHeight: "125%" }],
     },
     spacing: {
+      spaceMarginx: "100px",
+      spaceMarginTop: "80px",
       space10: "0.625rem",
       space15: "0.9375rem",
       space20: "1.25rem",
@@ -74,7 +76,7 @@ module.exports = {
     },
     fontFamily: {
       button: "Roboto",
-      text123: "Poppins, sans-serif",
+      text: "Poppins, sans-serif",
       links: "Inter', sans-serif",
     },
   },
