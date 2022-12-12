@@ -78,3 +78,15 @@
   position: absolute;
   bottom: -5%;
 }
+
+.menu-item-nav-desk {
+  transition: opacity 400ms ease;
+}
+
+.navbar-links:hover > .menu-item-nav-desk {
+  opacity: 0.3;
+}
+
+.navbar-links:hover > .menu-item-nav-desk:hover {
+  opacity: 1;
+}
