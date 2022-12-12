@@ -4,6 +4,7 @@ import Button from "../components/Button.astro";
 import Main from "../layouts/main.astro";
 import "../styles/global.css";
 import Header from "../components/Header.astro";
+import Footer from "./footer.astro";
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -23,7 +24,6 @@ import Header from "../components/Header.astro";
     <div class="grid place-items-center h-screen content-center">
       <Button>Hej :)</Button>
     </div>
-
-    <a href="/footer/">footer</a>
+    <Footer />
   </body>
 </html>
