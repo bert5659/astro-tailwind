@@ -53,6 +53,7 @@ module.exports = {
       deskH4: ["28.4px", { lineHeight: "125%" }],
       deskH5: ["21.33px", { lineHeight: "125%" }],
       deskP: ["16px", { lineHeight: "125%" }],
+      xscopy: ["12px", { lineHeight: "125%" }],
       deskButtonPrimary: ["32px", { lineHeight: "33px" }],
       deskButtonSecondary: ["16px", { lineHeight: "100%" }],
       mobileH1: ["32px", { lineHeight: "125%" }],
