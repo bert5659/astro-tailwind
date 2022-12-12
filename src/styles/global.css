@@ -1,6 +1,4 @@
 .toggle-menu {
-  /* top: 0.75rem;
-  right: 1rem; */
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -16,7 +14,16 @@
   border-radius: 10px;
 }
 
+header {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
 @media (max-width: 1200px) {
+  header {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
   .toggle-menu {
     display: flex;
   }
@@ -26,12 +33,6 @@
   }
 }
 
-/* @media (max-width: 600px) {
-  nav .logo {
-    display: none;
-  }
-} */
-
 .nav-icon-wrapper {
   z-index: 11;
 }
@@ -40,7 +41,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 2.5rem;
+  padding-left: 3.5rem;
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -62,8 +63,15 @@
   cursor: pointer;
   display: block;
   font-size: clamp(1.75rem, 1.3696rem + 1.7391vw, 3rem);
+  font-weight: 700;
   padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
   transition: opacity 400ms ease;
+}
+
+#menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 #menu-items:hover > .menu-item {
@@ -77,6 +85,7 @@
 .logo_full_nav {
   position: absolute;
   bottom: -5%;
+  left: calc(50%);
 }
 
 .menu-item-nav-desk {
