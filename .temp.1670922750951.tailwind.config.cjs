@@ -85,7 +85,7 @@ module.exports = {
       cornerRound: "10px",
     },
     boxShadow: {
-      shadowBox: "0 4px 4px 14px rgba(0, 0, 0, 0.1)",
+      cornerRound: "4px 4px 14px" rgba(0, 0, 0, 0.1), 
     },
   },
   plugins: [],
