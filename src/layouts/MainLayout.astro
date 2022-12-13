@@ -1,5 +1,10 @@
 ---
-const { content } = Astro.props;
+import Banner from "../components/Banner.astro";
+import FooterCider from "../components/FooterCider.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+
+const { title } = Astro.props;
 ---
 
 <html lang="da">
@@ -15,9 +20,15 @@ const { content } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@900&display=swap"
       rel="stylesheet"
     />
-    <title>{content.title}</title>
+    <title>{title}</title>
+    <script src="../js/script.js"></script>
   </head>
-  <body>
-    <slot />
+  <body class="bg-beige300 overflow-x-hidden">
+    <Banner />
+    <Header />
+    <main class="mx-spaceMarginx mt-spaceMarginTop">
+      <slot />
+    </main>
+    <FooterCider />
   </body>
 </html>
