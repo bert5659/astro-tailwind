@@ -17,3 +17,27 @@
     button.addEventListener("click", () => confetti());
   }
 </script>
+
+<!-- button ting!!
+--- const {(titel, beskrivelse, deluxe, variant, knapTekst)} = Astro.props; ---
+
+<button
+  data-variant={variant}
+  class="bg-slate-200 text-xl font-bold font-dosis text-white p-2 rounded"
+  >{knapTekst}</button
+>
+
+<style>
+  [data-variant="primary"] {
+    font-size: var(--card-button-desktop-font-size-default);
+    line-height: var(--card-button-desktop-line-height-default);
+    background-color: var(--card-button-desktop-default-background-color);
+  }
+
+  [data-variant="secondary"] {
+    font-size: var(--card-leading-button-desktop-font-size);
+    line-height: var(--card-leading-button-desktop-line-height);
+    background-color: var(--card-leading-button-desktop-background-color);
+  }
+</style>
+-->
