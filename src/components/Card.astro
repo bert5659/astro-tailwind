@@ -1,11 +1,12 @@
 ---
-const { titel, producent, pris } = Astro.props;
+const { titel, producent, pris, pic = "vin" } = Astro.props;
 import Button from "../components/Button.astro";
 ---
 
 <div class="flex items-center flex-col">
-  <img class="w-[416px] h-[415px]" src="../img/vin.png" alt="vin" />
-
+  <div>
+    <img class="w-[416px] h-[415px]" src={`/img/${pic}_pic.png`} alt="" />
+  </div>
   <h4 class="text-deskH4 font-bold text-grey600">{titel}</h4>
   <h4 class="text-deskH4 mb-space20 text-grey600">{producent}</h4>
   <h4 class="text-deskH4 font-bold mb-space20 text-black600">{pris}</h4>
