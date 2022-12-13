@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
 import Main from "../layouts/main.astro";
 import "../styles/global.css";
 import Header from "../components/Header.astro";
@@ -28,10 +29,28 @@ import Footer from "./footer.astro";
 
     <main class="mx-spaceMarginx mt-spaceMarginTop">
       <div class="grid place-items-center h-screen content-center">
-        <Button variant="primary" knapTekst="Køb nu" kurv={true} />
+        <!-- <Button variant="primary" knapTekst="Køb nu" kurv={true} />
         <Button variant="secondary" knapTekst="Køb nu" kurv={true} />
         <Button variant="inactive" knapTekst="Køb nu" kurv={true} />
-        <Button variant="warning" knapTekst="Køb nu" kurv={true} />
+        <Button variant="warning" knapTekst="Køb nu" kurv={true} /> -->
+
+        <div class="flex">
+          <Card
+            titel="Cidrerie de l’Apothicaire"
+            producent="Amzer Zo’"
+            pris="DKK 100"
+          />
+          <Card
+            titel="Cidrerie de l’Apothicaire"
+            producent="Amzer Zo’"
+            pris="DKK 100"
+          />
+          <Card
+            titel="Cidrerie de l’Apothicaire"
+            producent="Amzer Zo’"
+            pris="DKK 100"
+          />
+        </div>
       </div>
       <Cookie />
     </main>
