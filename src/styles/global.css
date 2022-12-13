@@ -5,6 +5,19 @@
   width: 30px;
   height: 21px;
   z-index: 11;
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-menu.x .bar:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.toggle-menu.x .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-menu.x .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .toggle-menu .bar {
@@ -12,9 +25,13 @@
   width: 100%;
   background-color: rgb(0, 0, 0);
   border-radius: 10px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 header {
+  position: sticky;
+  top: 10px;
+  z-index: 100;
   margin-left: 6rem;
   margin-right: 6rem;
 }
@@ -30,6 +47,12 @@ header {
 
   .navbar-links {
     display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  header {
+    top: 100px;
   }
 }
 
