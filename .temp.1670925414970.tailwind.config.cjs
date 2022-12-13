@@ -62,12 +62,7 @@ module.exports = {
       mobileH4: ["20px", { lineHeight: "125%" }],
       mobileH5: ["18px", { lineHeight: "125%" }],
       mobileP: ["18px", { lineHeight: "125%" }],
-      link: [
-        "16px",
-        { lineHeight: "125%" },
-        { fontFamily: "links" },
-        { font: "underlined" },
-      ],
+      link: ["16px", { lineHeight: "125%" }, { fontFamily:links }, {underlined},
       mobileButtonPrimary: ["20px", { lineHeight: "33px" }],
     },
     spacing: {
