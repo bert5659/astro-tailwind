@@ -11,27 +11,35 @@ import "../styles/global.css";
     <title>Error 404</title>
   </head>
   <body>
-    <main class="mx-space160 mt-space160">
-      <h1 class="text-mobileH1 pb-space20 font-black">Hovsa? - 404</h1>
-      <h2 class="text-mobileH2 font-medium">
-        Du er vist skvattet i et rådent æble.
-      </h2>
-      <h3 class="text-mobileH3 font-bold">Lad os hjælpe dig på benene igen!</h3>
-      <ul class="flex flex-col list-disc">
-        <li><a href="#forside">Forside</a></li>
-        <li><a href="#forside">Shop</a></li>
-        <li><a href="#forside">Om os</a></li>
-        <li><a href="#forside">Ciderskolen</a></li>
-      </ul>
-      <div class="w-full flex justify-center">
-        <img
-          class="mb-space160 mt-space160"
-          src="../img/able.png"
-          alt="Billede af et aeble"
-        />
+    <main class="mx-space160 mt-space160 md:grid md:grid-cols-2">
+      <div>
+        <h1 class="text-mobileH1 md:text-deskH1 pb-space20 font-black">
+          Hovsa? - 404
+        </h1>
+        <h2 class="text-mobileH2 md:text-deskH2 font-medium pb-space160">
+          Du er vist skvattet i et rådent æble.
+        </h2>
+        <h3 class="text-mobileH3 md:text-deskH3 font-medium pt-space20">
+          Lad os hjælpe dig på benene igen!
+        </h3>
+        <ul class="flex flex-col list-disc pt-space15 underline text-blue500">
+          <li><a href="#forside">Forside</a></li>
+          <li><a href="#forside">Shop</a></li>
+          <li><a href="#forside">Om os</a></li>
+          <li><a href="#forside">Ciderskolen</a></li>
+        </ul>
       </div>
-      <div class="w-full flex justify-center">
-        <img src="../img/cirkel.png" alt="Skygge på aeble" />
+      <div class="md:grid text-link hidden">
+        <div class="w-full flex justify-center">
+          <img
+            class="mb-space160 mt-space160"
+            src="../img/able.png"
+            alt="Billede af et aeble"
+          />
+        </div>
+        <div class="w-full flex justify-center">
+          <img class="w-1/2" src="../img/cirkel.png" alt="Skygge på aeble" />
+        </div>
       </div>
     </main>
   </body>
