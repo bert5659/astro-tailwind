@@ -12,7 +12,9 @@ const { variant, knapTekst, kurv } = Astro.props;
       </div>
     )
   }
-  {knapTekst}
+  <h4 class="font-text text-deskH4">
+    {knapTekst}
+  </h4>
 </button>
 
 <style>
@@ -22,8 +24,8 @@ const { variant, knapTekst, kurv } = Astro.props;
     gap: 20px;
     align-items: center;
     font-size: 32px;
-    width: 279px;
-    height: 68px;
+    width: 200px;
+    height: 50px;
     background-color: #4f7359;
   }
   [data-variant="primary_ciderskolen"] {

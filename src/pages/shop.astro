@@ -11,71 +11,205 @@ import Overatten from "../components/Overatten.astro";
 ---
 
 <MainLayout>
-  <div class="grid grid-cols-2 items-center -mt-space160 mb-space160">
+  <div
+    class="lg:grid lg:grid-cols-2 items-center -mt-space160 mb-space160 flex flex-col"
+  >
     <div>
-      <h1 class="text-deskH1 font-bold">CIDERSHOPPEN</h1>
-      <h2 class="text-deskH2">Cider der smager af mere</h2>
+      <h1 class="lg:text-deskH1 text-mobileH1 font-bold font-text">
+        CIDERSHOPPEN
+      </h1>
+      <h3 class="lg:text-deskH3 text-mobileP font-text">
+        Cider der smager af mere
+      </h3>
     </div>
     <img src="/img/shopsplash.png" alt="splash" />
   </div>
-  <div class="flex mb-space40">
-    <Card
-      titel="Cidrerie de l’Apothicaire"
-      producent="Amzer Zo’"
-      pris="DKK 100"
-      pic="vin"
-    />
-    <Card
-      titel="Cidrerie de l’Apothicaire"
-      producent="Amzer Zo’"
-      pris="DKK 100"
-      pic="juledessertcidere 1"
-    />
-    <Card
-      titel="Cidrerie de l’Apothicaire"
-      producent="Amzer Zo’"
-      pris="DKK 100"
-      pic="julekasse"
-    />
+
+  <!-- Smagskasser -->
+
+  <h2 class="text-deskH2 font-text ml-space90 mt-space20 font-bold mb-space50">
+    Smagskasser
+  </h2>
+
+  <div class="lg:flex items-center lg:flex-col">
+    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="danskkasse_et"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="franskkasse_to"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="startkasse_tre"
+      />
+    </div>
   </div>
-  <div class="flex mb-space40">
-    <Card
-      titel="Cidrerie de l’Apothicaire"
-      producent="Amzer Zo’"
-      pris="DKK 100"
-      pic="vin"
-    />
-    <Card
-      titel="Cidrerie de l’Apothicaire"
-      producent="Amzer Zo’"
-      pris="DKK 100"
-      pic="juledessertcidere 1"
-    />
-    <Card
-      titel="Cidrerie de l’Apothicaire"
-      producent="Amzer Zo’"
-      pris="DKK 100"
-      pic="julekasse"
-    />
+
+  <h2 class="text-deskH2 font-text ml-space90 font-bold mt-space20 mb-space50">
+    Fransk
+  </h2>
+  <!-- Fransk -->
+  <div class="lg:flex items-center lg:flex-col">
+    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="fransk_et"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="fransk_to"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="fransk_tre"
+      />
+    </div>
   </div>
-  <div class="flex mb-space40">
-    <Card
-      titel="Cidrerie de l’Apothicaire"
-      producent="Amzer Zo’"
-      pris="DKK 100"
-      pic="vin"
-    />
-    <Card
-      titel="Cidrerie de l’Apothicaire"
-      producent="Amzer Zo’"
-      pris="DKK 100"
-      pic="juledessertcidere 1"
-    />
-    <Card
-      titel="Cidrerie de l’Apothicaire"
-      producent="Amzer Zo’"
-      pris="DKK 100"
-      pic="julekasse"
-    />
+  <h2 class="text-deskH2 font-text ml-space90 font-bold mt-space20 mb-space50">
+    Dansk
+  </h2>
+
+  <div class="lg:flex items-center lg:flex-col">
+    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="dansk_et"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="dansk_to"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="dansk_tre"
+      />
+    </div>
+  </div>
+  <h2 class="text-deskH2 font-text ml-space90 font-bold mt-space20 mb-space50">
+    Spansk & Tysk
+  </h2>
+
+  <div class="lg:flex items-center lg:flex-col">
+    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="spansk_et"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="spansk_to"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="spansk_tre"
+      />
+    </div>
+  </div>
+  <h2 class="text-deskH2 font-text ml-space90 font-bold mt-space20 mb-space50">
+    Engelsk
+  </h2>
+
+  <div class="lg:flex items-center lg:flex-col">
+    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="england_et"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="england_to"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="england_tre"
+      />
+    </div>
+  </div>
+  <h2 class="text-deskH2 font-text ml-space90 font-bold mt-space20 mb-space50">
+    Vores cider
+  </h2>
+
+  <div class="lg:flex items-center lg:flex-col">
+    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="vores_et"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="vores_to"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="vores_tre"
+      />
+    </div>
+  </div>
+
+  <!-- Alkoholfri -->
+
+  <h2 class="text-deskH2 font-text ml-space90 font-bold mt-space20 mb-space50">
+    Alkoholfri
+  </h2>
+  <div class="lg:flex items-center lg:flex-col">
+    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="alkoholfri_et"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="alkoholfri_to"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="alkoholfri_tre"
+      />
+    </div>
   </div>
 </MainLayout>
