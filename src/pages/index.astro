@@ -1,64 +1,43 @@
 ---
 // Component Imports
-import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
-import Main from "../layouts/main.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/global.css";
-import Header from "../components/Header.astro";
-import Banner from "../components/Banner.astro";
 import Cookie from "../components/Cookie.astro";
-import Footer from "./footer.astro";
 import Overatten from "../components/Overatten.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Ciderrevolution</title>
-    <script src="../js/script.js"></script>
-  </head>
+<MainLayout>
+  <div class="grid place-items-center h-screen content-center">
+    <!-- <Button variant="primary" knapTekst="Køb nu" kurv={true} />
+          <Button variant="secondary" knapTekst="Køb nu" kurv={true} />
+          <Button variant="inactive" knapTekst="Køb nu" kurv={true} />
+          <Button variant="warning" knapTekst="Køb nu" kurv={true} /> -->
 
-  <body class="bg-beige300 overflow-x-hidden">
-    <Banner />
-    <Header />
-
-    <main class="mx-spaceMarginx mt-spaceMarginTop">
-      <div class="grid place-items-center h-screen content-center">
-        <!-- <Button variant="primary" knapTekst="Køb nu" kurv={true} />
-        <Button variant="secondary" knapTekst="Køb nu" kurv={true} />
-        <Button variant="inactive" knapTekst="Køb nu" kurv={true} />
-        <Button variant="warning" knapTekst="Køb nu" kurv={true} /> -->
-
-        <div class="flex">
-          <Card
-            titel="Cidrerie de l’Apothicaire"
-            producent="Amzer Zo’"
-            pris="DKK 100"
-            pic="vin"
-          />
-          <Card
-            titel="Cidrerie de l’Apothicaire"
-            producent="Amzer Zo’"
-            pris="DKK 100"
-            pic="juledessertcidere 1"
-          />
-          <Card
-            titel="Cidrerie de l’Apothicaire"
-            producent="Amzer Zo’"
-            pris="DKK 100"
-            pic="julekasse"
-          />
-        </div>
-      </div>
-      <Overatten />
-      <Cookie />
-    </main>
-    <Footer />
-  </body>
-</html>
+    <div class="flex">
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="vin"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="juledessertcidere 1"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="julekasse"
+      />
+    </div>
+  </div>
+  <Overatten />
+  <Cookie />
+</MainLayout>
