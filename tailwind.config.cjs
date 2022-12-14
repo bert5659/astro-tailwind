@@ -61,7 +61,7 @@ module.exports = {
       mobileH3: ["26px", { lineHeight: "125%" }],
       mobileH4: ["20px", { lineHeight: "125%" }],
       mobileH5: ["18px", { lineHeight: "125%" }],
-      mobileP: ["18px", { lineHeight: "125%" }],
+      mobileP: ["18px", { lineHeight: "30px" }],
       link: ["16px", { lineHeight: "125%" }],
       mobileButtonPrimary: ["20px", { lineHeight: "33px" }],
     },
