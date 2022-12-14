@@ -12,22 +12,34 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout>
-  <div class="gap-space25 flex flex-col">
-    <h1 class="text-mobileH1 lg:text-deskH1 font-text font-bold text-black600">
-      Ciderskolen
-    </h1>
-    <p>
-      Lær alt om, hvordan du laver cider, dyk ned ciderens forunderlige historie
-      eller læs vores mange spændende blogindlæg om alt, hvad der hedder cider.
-    </p>
-    <div class="flex flex-col gap-space25 w-full">
-      <Button variant="primary_ciderskolen" knapTekst="Om cider" kurv={false} />
-      <Button
-        variant="primary_ciderskolen"
-        knapTekst="Lav din egen cider"
-        kurv={false}
-      />
-      <Button variant="primary_ciderskolen" knapTekst="Blog" kurv={false} />
+  <div class="sm:grid lg:grid-cols-2 flex flex-col">
+    <div class="gap-space25 flex flex-col">
+      <h1
+        class="text-mobileH1 lg:text-deskH1 font-text font-bold text-black600"
+      >
+        Ciderskolen
+      </h1>
+      <p class="max-w-[550px] font-text text-deskP">
+        Lær alt om, hvordan du laver cider, dyk ned ciderens forunderlige
+        historie eller læs vores mange spændende blogindlæg om alt, hvad der
+        hedder cider.
+      </p>
+      <div class="flex flex-col gap-space25 w-full">
+        <Button
+          variant="primary_ciderskolen"
+          knapTekst="Om cider"
+          kurv={false}
+        />
+        <Button
+          variant="primary_ciderskolen"
+          knapTekst="Lav din egen cider"
+          kurv={false}
+        />
+        <Button variant="primary_ciderskolen" knapTekst="Blog" kurv={false} />
+      </div>
+    </div>
+    <div class="illustration lg:grid place-items-center hidden">
+      <img src="../img/wood.png" alt="" />
     </div>
   </div>
 </MainLayout>
