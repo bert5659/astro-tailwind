@@ -5,33 +5,38 @@ const logo = document.querySelector(".logo");
 const html = document.querySelector("html");
 const body = document.querySelector("body");
 
-toggleButton.addEventListener("click", () => {
-  nav2.classList.toggle("open");
-  toggleButton.classList.toggle("x");
-
+window.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
   hideLogo();
-  overflowThing();
+
+  window.addEventListener("resize", hideLogo);
+
+  toggleButton.addEventListener("click", () => {
+    nav2.classList.toggle("open");
+    toggleButton.classList.toggle("x");
+
+    hideLogo();
+    overflowThing();
+  });
+
+  function hideLogo() {
+    if (
+      nav2.classList.contains("open") ||
+      window.matchMedia("(max-width: 600px)").matches
+    ) {
+      logo.style.display = "none";
+    } else {
+      logo.style.display = "block";
+    }
+  }
+
+  function overflowThing() {
+    if (nav2.classList.contains("open")) {
+      html.style.overflowY = "hidden";
+      body.style.overflowY = "hidden";
+    } else {
+      html.style.overflowY = "auto";
+      body.style.overflowY = "auto";
+    }
+  }
 });
-
-window.addEventListener("resize", hideLogo);
-
-function hideLogo() {
-  if (
-    nav2.classList.contains("open") ||
-    window.matchMedia("(max-width: 600px)").matches
-  ) {
-    logo.style.display = "none";
-  } else {
-    logo.style.display = "block";
-  }
-}
-
-function overflowThing() {
-  if (nav2.classList.contains("open")) {
-    html.style.overflowY = "hidden";
-    body.style.overflowY = "hidden";
-  } else {
-    html.style.overflowY = "auto";
-    body.style.overflowY = "auto";
-  }
-}
