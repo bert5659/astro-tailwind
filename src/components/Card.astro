@@ -3,13 +3,20 @@ const { titel, producent, pris, pic = "vin" } = Astro.props;
 import Button from "../components/Button.astro";
 ---
 
-<div class="flex items-center flex-col">
+<div class="flex items-center flex-col bg-beige400 lg:pb-space25">
   <div>
-    <img class="w-[416px] h-[415px]" src={`/img/${pic}_pic.png`} alt="" />
+    <img
+      class="w-[300px]"
+      src={`/img/produktbilleder/${pic}_pic-100.webp`}
+      alt=""
+    />
   </div>
-  <h4 class="text-deskH4 font-bold text-grey600">{titel}</h4>
-  <h4 class="text-deskH4 mb-space20 text-grey600">{producent}</h4>
-  <h4 class="text-deskH4 font-bold mb-space20 text-black600">{pris}</h4>
-
+  <h4 class="text-deskH4 font-text mt-space20 font-bold text-grey600">
+    {titel}
+  </h4>
+  <h4 class="text-deskH4 font-text mb-space20 text-grey600">{producent}</h4>
+  <h4 class="text-deskH4 font-text font-bold mb-space20 text-black600">
+    {pris}
+  </h4>
   <Button variant="primary" knapTekst="Tilføj til kurv" kurv={false} />
 </div>
