@@ -1,0 +1,81 @@
+---
+// Component Imports
+import Card from "../components/Card.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+import Cookie from "../components/Cookie.astro";
+import Overatten from "../components/Overatten.astro";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<MainLayout>
+  <div class="grid grid-cols-2 items-center -mt-space160 mb-space160">
+    <div>
+      <h1 class="text-deskH1 font-bold">CIDERSHOPPEN</h1>
+      <h2 class="text-deskH2">Cider der smager af mere</h2>
+    </div>
+    <img src="/img/shopsplash.png" alt="splash" />
+  </div>
+  <div class="flex mb-space40">
+    <Card
+      titel="Cidrerie de l’Apothicaire"
+      producent="Amzer Zo’"
+      pris="DKK 100"
+      pic="vin"
+    />
+    <Card
+      titel="Cidrerie de l’Apothicaire"
+      producent="Amzer Zo’"
+      pris="DKK 100"
+      pic="juledessertcidere 1"
+    />
+    <Card
+      titel="Cidrerie de l’Apothicaire"
+      producent="Amzer Zo’"
+      pris="DKK 100"
+      pic="julekasse"
+    />
+  </div>
+  <div class="flex mb-space40">
+    <Card
+      titel="Cidrerie de l’Apothicaire"
+      producent="Amzer Zo’"
+      pris="DKK 100"
+      pic="vin"
+    />
+    <Card
+      titel="Cidrerie de l’Apothicaire"
+      producent="Amzer Zo’"
+      pris="DKK 100"
+      pic="juledessertcidere 1"
+    />
+    <Card
+      titel="Cidrerie de l’Apothicaire"
+      producent="Amzer Zo’"
+      pris="DKK 100"
+      pic="julekasse"
+    />
+  </div>
+  <div class="flex mb-space40">
+    <Card
+      titel="Cidrerie de l’Apothicaire"
+      producent="Amzer Zo’"
+      pris="DKK 100"
+      pic="vin"
+    />
+    <Card
+      titel="Cidrerie de l’Apothicaire"
+      producent="Amzer Zo’"
+      pris="DKK 100"
+      pic="juledessertcidere 1"
+    />
+    <Card
+      titel="Cidrerie de l’Apothicaire"
+      producent="Amzer Zo’"
+      pris="DKK 100"
+      pic="julekasse"
+    />
+  </div>
+</MainLayout>
