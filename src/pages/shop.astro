@@ -25,15 +25,39 @@ import Overatten from "../components/Overatten.astro";
     <img src="/img/shopsplash.png" alt="splash" />
   </div>
 
-  <!-- Smagskasser -->
-
-  <div class="lg:grid items-center place-content-center">
-    <div class="place-self-start">
-      <h2 class="text-deskH2 font-text font-bold mt-space20 mb-space50">
-        Smagskasser
-      </h2>
+  <!-- test -->
+  <div class="smagekasser flex flex-col">
+    <h2 class="">Smagekasser</h2>
+    <div class="smage-items">
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="danskkasse_et"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="franskkasse_to"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="startkasse_tre"
+      />
     </div>
-    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+  </div>
+
+  <!-- Smagskasser -->
+  <div class="flex flex-col justify-center">
+    <h2 class="text-deskH2 font-text font-bold mt-space20 mb-space50">
+      Smagskasser
+    </h2>
+    <div
+      class="lg:justify-between place-self-center lg:flex lg:flex-row flex flex-col"
+    >
       <Card
         titel="Cidrerie de l’Apothicaire"
         producent="Amzer Zo’"

@@ -3,13 +3,9 @@ const { titel, producent, pris, pic = "vin" } = Astro.props;
 import Button from "../components/Button.astro";
 ---
 
-<div class="flex items-center flex-col">
-  <div>
-    <img
-      class="w-[300px]"
-      src={`/img/produktbilleder/${pic}_pic-100.webp`}
-      alt=""
-    />
+<div class="flex items-center flex-col w-[300px]">
+  <div class="">
+    <img class="" src={`/img/produktbilleder/${pic}_pic-100.webp`} alt="" />
   </div>
   <div
     class="bg-beige400 pb-space25 flex items-center flex-col w-[300px] lg:pb-space25"
