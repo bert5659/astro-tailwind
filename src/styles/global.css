@@ -1,16 +1,37 @@
-html,
+/* html,
 body {
   overflow-x: hidden;
-}
+} */
 
 header {
   padding-top: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
   margin-left: 6rem;
   margin-right: 6rem;
   background-color: inherit;
+}
+
+.nysticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.totopbutton {
+  position: fixed;
+  font-size: small;
+  bottom: 70px;
+  right: 50px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+#top-button {
+  /* Other styles... */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#top-button.visible {
+  opacity: 1;
 }
 
 .toggle-menu {

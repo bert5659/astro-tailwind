@@ -27,7 +27,7 @@ import Button from "../components/Button.astro";
   </div>
 
   <!-- Kategorier web -->
-  <div class="">
+  <div id="filter" class="nysticky">
     <div id="toggle-menu2" class="">
       <ul class="kategorier lg:flex lg:justify-between hidden bg-green300">
         <a
@@ -58,7 +58,7 @@ import Button from "../components/Button.astro";
   </div>
 
   <!-- Kategorier mobil -->
-  <div id="filtermenu" class="lg:hidden grid place-content-center">
+  <div id="filtermenu" class="lg:hidden grid nysticky place-content-center">
     <div id="toggle-filtermenu">
       <Button variant="kategori" knapTekst="Kategorier" />
     </div>
@@ -95,7 +95,10 @@ import Button from "../components/Button.astro";
       </div>
     </ul>
   </div>
-
+  <button
+    class="totopbutton font-text text-lilac100 w-[100px] bg-green300 p-space1 mt-space90"
+    id="top-button">Return to top</button
+  >
   <!-- Smagskasser -->
   <div id="smagekasser" class="lg:flex lg:flex-col flex flex-col">
     <div class="">
