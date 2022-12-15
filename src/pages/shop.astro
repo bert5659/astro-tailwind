@@ -5,6 +5,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/global.css";
 import Cookie from "../components/Cookie.astro";
 import Overatten from "../components/Overatten.astro";
+import Button from "../components/Button.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -25,9 +26,86 @@ import Overatten from "../components/Overatten.astro";
     <img src="/img/shopsplash.png" alt="splash" />
   </div>
 
-  <!-- test -->
-  <div class="smagekasser flex flex-col">
-    <h2 class="">Smagekasser</h2>
+  <!-- Kategorier web -->
+  <div class="">
+    <div id="toggle-menu2" class="">
+      <ul class="kategorier lg:flex lg:justify-between hidden bg-green300">
+        <a
+          class="font-text text-lilac100 bg-green300 p-space15"
+          href="#smagekasser">Smagekasser</a
+        >
+        <a class="font-text text-lilac100 bg-green300 p-space15" href="#fransk"
+          >Fransk</a
+        >
+        <a class="font-text text-lilac100 bg-green300 p-space15" href="#dansk"
+          >Dansk</a
+        >
+        <a class="font-text text-lilac100 bg-green300 p-space15" href="#st"
+          >Spansk & Tysk</a
+        >
+        <a class="font-text text-lilac100 bg-green300 p-space15" href="#engelsk"
+          >Engelsk</a
+        >
+        <a class="font-text text-lilac100 bg-green300 p-space15" href="#vc"
+          >Vores cider</a
+        >
+        <a
+          class="font-text text-lilac100 bg-green300 p-space15"
+          href="#alkoholfri">Alkoholfri</a
+        >
+      </ul>
+    </div>
+  </div>
+
+  <!-- Kategorier mobil -->
+  <div id="filtermenu" class="lg:hidden grid place-content-center">
+    <div id="toggle-filtermenu">
+      <Button variant="kategori" knapTekst="Kategorier" />
+    </div>
+    <ul id="filternav2" class="flex">
+      <div class="flex flex-col items-center">
+        <a
+          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+          href="#smagekasser">Smagekasser</a
+        >
+        <a
+          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+          href="#fransk">Fransk</a
+        >
+        <a
+          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+          href="#dansk">Dansk</a
+        >
+        <a
+          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+          href="#st">Spansk & Tysk</a
+        >
+        <a
+          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+          href="#engelsk">Engelsk</a
+        >
+        <a
+          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+          href="#vc">Vores cider</a
+        >
+        <a
+          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+          href="#alkoholfri">Alkoholfri</a
+        >
+      </div>
+    </ul>
+  </div>
+
+  <!-- Smagskasser -->
+  <div id="smagekasser" class="lg:flex lg:flex-col flex flex-col">
+    <div class="">
+      <h2
+        class="text-deskH2 place-self-center font-text font-bold mt-space20 mb-space30"
+      >
+        Smagskasser
+      </h2>
+    </div>
+    <!-- <hr class="mb-space50 h-[2px] border-none bg-orange-400" /> -->
     <div class="smage-items">
       <Card
         titel="Cidrerie de l’Apothicaire"
@@ -50,43 +128,15 @@ import Overatten from "../components/Overatten.astro";
     </div>
   </div>
 
-  <!-- Smagskasser -->
-  <div class="flex flex-col justify-center">
-    <h2 class="text-deskH2 font-text font-bold mt-space20 mb-space50">
-      Smagskasser
-    </h2>
-    <div
-      class="lg:justify-between place-self-center lg:flex lg:flex-row flex flex-col"
-    >
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="danskkasse_et"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="franskkasse_to"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="startkasse_tre"
-      />
-    </div>
-  </div>
-
   <!-- Fransk -->
-  <div class="lg:grid place-content-center">
-    <div>
-      <h2 class="text-deskH2 font-text font-bold mt-space20 mb-space50">
-        Fransk
-      </h2>
-    </div>
-    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+  <div id="fransk" class="items-center lg:flex lg:flex-col flex flex-col">
+    <h2
+      class="text-deskH2 place-self-start font-text font-bold mt-space20 mb-space50"
+    >
+      Fransk
+    </h2>
+
+    <div class="smage-items">
       <Card
         titel="Cidrerie de l’Apothicaire"
         producent="Amzer Zo’"
@@ -109,14 +159,14 @@ import Overatten from "../components/Overatten.astro";
   </div>
 
   <!-- Dansk -->
+  <div id="dansk" class="items-center lg:flex lg:flex-col flex flex-col">
+    <h2
+      class="text-deskH2 place-self-start font-text font-bold mt-space20 mb-space50"
+    >
+      Dansk
+    </h2>
 
-  <div class="lg:grid items-center place-content-center">
-    <div class="place-self-start">
-      <h2 class="text-deskH2 font-text font-bold mt-space20 mb-space50">
-        Dansk
-      </h2>
-    </div>
-    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+    <div class="smage-items">
       <Card
         titel="Cidrerie de l’Apothicaire"
         producent="Amzer Zo’"
@@ -138,41 +188,43 @@ import Overatten from "../components/Overatten.astro";
     </div>
   </div>
 
-  <div class="lg:flex items-center lg:flex-col">
-    <div class="lg:grid items-center place-content-center">
-      <div class="place-self-start">
-        <h2 class="text-deskH2 font-text font-bold mt-space20 mb-space50">
-          Spansk & Tysk
-        </h2>
-      </div>
-      <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
-        <Card
-          titel="Cidrerie de l’Apothicaire"
-          producent="Amzer Zo’"
-          pris="DKK 100"
-          pic="spansk_et"
-        />
-        <Card
-          titel="Cidrerie de l’Apothicaire"
-          producent="Amzer Zo’"
-          pris="DKK 100"
-          pic="spansk_to"
-        />
-        <Card
-          titel="Cidrerie de l’Apothicaire"
-          producent="Amzer Zo’"
-          pris="DKK 100"
-          pic="spansk_tre"
-        />
-      </div>
+  <!-- Spansk & Tyske -->
+  <div id="st" class="items-center lg:flex lg:flex-col flex flex-col">
+    <h2
+      class="text-deskH2 place-self-start font-text font-bold mt-space20 mb-space50"
+    >
+      Spansk & Tysk
+    </h2>
+    <div class="smage-items">
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="spansk_et"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="spansk_to"
+      />
+      <Card
+        titel="Cidrerie de l’Apothicaire"
+        producent="Amzer Zo’"
+        pris="DKK 100"
+        pic="spansk_tre"
+      />
     </div>
   </div>
-  <h2 class="text-deskH2 font-text ml-space90 font-bold mt-space20 mb-space50">
-    Engelsk
-  </h2>
 
-  <div class="lg:flex items-center lg:flex-col">
-    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+  <!-- Engelsk -->
+  <div id="engelsk" class="items-center lg:flex lg:flex-col flex flex-col">
+    <h2
+      class="text-deskH2 place-self-start font-text font-bold mt-space20 mb-space50"
+    >
+      Engelsk
+    </h2>
+    <div class="smage-items">
       <Card
         titel="Cidrerie de l’Apothicaire"
         producent="Amzer Zo’"
@@ -193,12 +245,15 @@ import Overatten from "../components/Overatten.astro";
       />
     </div>
   </div>
-  <h2 class="text-deskH2 font-text ml-space90 font-bold mt-space20 mb-space50">
-    Vores cider
-  </h2>
 
-  <div class="lg:flex items-center lg:flex-col">
-    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+  <!-- Vores cider -->
+  <div id="vc" class="items-center lg:flex lg:flex-col flex flex-col">
+    <h2
+      class="text-deskH2 place-self-start font-text font-bold mt-space20 mb-space50"
+    >
+      Vores cider
+    </h2>
+    <div class="smage-items">
       <Card
         titel="Cidrerie de l’Apothicaire"
         producent="Amzer Zo’"
@@ -221,12 +276,13 @@ import Overatten from "../components/Overatten.astro";
   </div>
 
   <!-- Alkoholfri -->
-
-  <h2 class="text-deskH2 font-text ml-space90 font-bold mt-space20 mb-space50">
-    Alkoholfri
-  </h2>
-  <div class="lg:flex items-center lg:flex-col">
-    <div class="lg:flex lg:flex-row flex flex-col gap-space80 mb-space40">
+  <div id="alkoholfri" class="items-center lg:flex lg:flex-col flex flex-col">
+    <h2
+      class="text-deskH2 place-self-start font-text font-bold mt-space20 mb-space50"
+    >
+      Alkoholfri
+    </h2>
+    <div class="smage-items">
       <Card
         titel="Cidrerie de l’Apothicaire"
         producent="Amzer Zo’"

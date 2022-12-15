@@ -169,5 +169,20 @@ header {
   width: 100%;
   gap: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }
+
+/* filternav */
+#filtermenu ul {
+  /* Hide the filtermenu by default */
+  display: none;
+}
+
+#filtermenu ul.collapsed {
+  /* Show the filtermenu when the "collapsed" class is present */
+  display: block;
+}
+
+/* .testimonials_wrapper {
+  width: 100vw;
+} */

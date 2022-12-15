@@ -4,6 +4,7 @@ const mainHeader = document.querySelector("header");
 const logo = document.querySelector(".logo");
 const html = document.querySelector("html");
 const body = document.querySelector("body");
+var nav = document.getElementById("filternav");
 
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
@@ -39,4 +40,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
       body.style.overflowY = "auto";
     }
   }
+});
+
+// Filternav
+// Get the toggle button
+var toggleButton2 = document.getElementById("toggle-filtermenu");
+
+// Add a click event listener to the toggle button
+toggleButton2.addEventListener("click", function () {
+  // When the button is clicked, toggle the "collapsed" class on the filtermenu
+  filtermenu.querySelector("ul").classList.toggle("collapsed");
 });
