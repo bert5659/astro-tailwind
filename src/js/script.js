@@ -41,6 +41,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
 });
 
+//Til topppen knap//
+
 // Get a reference to the button
 const topButton = document.getElementById("top-button");
 
@@ -49,6 +51,9 @@ topButton.addEventListener("click", function () {
   // When the button is clicked, scroll to the top of the page
   window.scrollTo(0, 0);
 });
+
+//Mobil knap til kategori drop-down//
+
 // Filternav
 const filtermenu = document.getElementById("filtermenu");
 const toggleButton2 = document.getElementById("toggle-filtermenu");
@@ -69,6 +74,8 @@ aTags.forEach(function (aTag) {
     filtermenu.querySelector("ul").classList.toggle("collapsed");
   });
 });
+
+//Nav forsvinder og kategorier bliver sticky//
 
 // First, we get references to the two elements that we want to work with
 var stickyElement = document.getElementById("my-header");
