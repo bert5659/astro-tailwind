@@ -4,7 +4,7 @@ const mainHeader = document.querySelector("header");
 const logo = document.querySelector(".logo");
 const html = document.querySelector("html");
 const body = document.querySelector("body");
-var nav = document.getElementById("filternav");
+const toggleButton2 = document.getElementById("toggle-filtermenu");
 
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
@@ -43,10 +43,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 // Filternav
-// Get the toggle button
-var toggleButton2 = document.getElementById("toggle-filtermenu");
-
-// Add a click event listener to the toggle button
+// Add a click event listener to the togglebutton2
 toggleButton2.addEventListener("click", function () {
   // When the button is clicked, toggle the "collapsed" class on the filtermenu
   filtermenu.querySelector("ul").classList.toggle("collapsed");
