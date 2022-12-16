@@ -1,0 +1,164 @@
+---
+import Button from "../components/Button.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+---
+
+<MainLayout title="Din kurv">
+  <main>
+    <section class="lg:hidden" id="mobil">
+      <div>
+        <a href="/shop"
+          ><Button variant="thirdy" knapTekst="Fortsæt med at handle" />
+        </a>
+        <h1 class="text-mobileH1 font-bold mt-space50 font-text mb-space30">
+          Kurv
+        </h1>
+        <hr class="h-[2px] bg-orange-300 border-none" />
+      </div>
+
+      <div class="mt-space30 mb-space30">
+        <img class="" src="img/kurvbillede.png" alt="" />
+      </div>
+      <section class="flex flex-col gap-space30">
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Produkt</h5>
+          <h5 class="text-mobileH5 font-text">CIDERBAR TO-GO (12 STK)</h5>
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Pris</h5>
+          <h5 class="text-mobileH5 font-text">455 DKK</h5>
+        </div>
+        <div class="flex justify-between">
+          <!-- <h5 class="text-mobileH5 font-semibold">Mængde</h5> -->
+          <label
+            for="exampleFormControlInput1"
+            class="form-label font-text inline-block text-mobileH5 font-semibold lg:w-[19000px]"
+            >Mængde</label
+          >
+          <input
+            type="number"
+            class="form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            id="exampleFormControlInput1"
+            placeholder="Eks. 2 stk"
+          />
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Fjern</h5>
+          <img class="w-[20px]" src="img/fjernikon.svg" alt="" />
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Total</h5>
+          <h5 class="text-mobileH5 font-text underline">455 DKK</h5>
+        </div>
+      </section>
+      <hr class="h-[2px] mt-space40 bg-orange-300 border-none" />
+      <div class="mt-space30 mb-space30">
+        <img class="" src="img/kurvbillede2.png" alt="" />
+      </div>
+      <section class="flex flex-col gap-space30">
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Produkt</h5>
+          <h5 class="text-mobileH5 font-text">Genluk - Ciderprop</h5>
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Pris</h5>
+          <h5 class="text-mobileH5 font-text">35 DKK</h5>
+        </div>
+        <div class="flex justify-between">
+          <!-- <h5 class="text-mobileH5 font-semibold">Mængde</h5> -->
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block font-text text-mobileH5 font-semibold lg:w-[19000px]"
+            >Mængde</label
+          >
+          <input
+            type="number"
+            class="form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            id="exampleFormControlInput1"
+            placeholder="Eks. 2 stk"
+          />
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Fjern</h5>
+          <img class="w-[20px]" src="img/fjernikon.svg" alt="" />
+        </div>
+        <div class="flex justify-between">
+          <h5 class="text-mobileH5 font-text font-semibold">Total</h5>
+          <h5 class="text-mobileH5 font-text underline">35 DKK</h5>
+        </div>
+      </section>
+      <hr class="h-[2px] mt-space40 bg-orange-300 border-none" />
+      <section>
+        <div class="flex mt-space30 border-b-2 border-black w-[230px]">
+          <h2 class="text-mobileH2 font-bold font-text mr-space10">TOTAL:</h2>
+          <h2 class="text-mobileH2 font-bold font-text">490 DKK</h2>
+        </div>
+
+        <div>
+          <label
+            for="exampleFormControlInput1"
+            class="form-label mt-space30 mb-space10 inline-block font-text text-mobileH4 font-semibold"
+            >Rabatkupon:</label
+          >
+          <input
+            type="text"
+            class="form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            id="exampleFormControlInput1"
+            placeholder="Indtast rabatkupon her"
+          />
+          <p class="text-mobileP mt-space25">
+            Storkøbenhavn: Fragt: 40 kr. med forventet levering: 1-3 hverdage.
+            Resten af landet: Fragt: 80 kr. med forventet levering: 2-4
+            hverdage. Gratis afhentning i vores butik på Ørnevej (KBH NV)
+          </p>
+          <div class="mt-space30">
+            <Button variant="primary" knapTekst="Checkout" />
+          </div>
+        </div>
+      </section>
+
+      <!-- <div class="grid grid-cols-2">
+        <div class="flex flex-col gap-[36px]">
+          <h5 class="text-mobileH5 font-semibold">Produkt</h5>
+          <h5 class="text-mobileH5 font-semibold">Pris</h5>
+          <h5 class="text-mobileH5 font-semibold">Mængde</h5>
+          <h5 class="text-mobileH5 font-semibold">Fjern</h5>
+          <h5 class="text-mobileH5 font-semibold">Total</h5>
+        </div>
+        <div class="flex flex-col gap-space30">
+          <h5 class="text-mobileH5">CIDERBAR TO-GO (12 STK)</h5>
+          <h5 class="text-mobileH5 font-semibold">455 DKK</h5>
+          <h5 class="text-mobileH5 font-semibold">Mængde</h5>
+          <img class="w-[20px]" src="img/fjernikon.svg" alt="" />
+          <h5 class="text-mobileH5 font-semibold">455 DKK</h5>
+        </div>
+      </div> -->
+    </section>
+    <section>
+      <div>
+        <a href="/shop"
+          ><Button variant="thirdy" knapTekst="Fortsæt med at handle" />
+        </a>
+        <h1 class="text-deskH1 font-bold mt-space50 font-text mb-space30">
+          Kurv
+        </h1>
+      </div>
+      <div class="flex justify-between">
+        <h5 class="text-deskH5 font-text font-semibold">Produkt</h5>
+        <h5 class="text-deskH5 font-text font-semibold">Pris</h5>
+        <h5 class="text-deskH5 font-text font-semibold">Mængde</h5>
+        <h5 class="text-deskH5 font-text font-semibold">Fjern</h5>
+        <h5 class="text-deskH5 font-text font-semibold">Total</h5>
+      </div>
+      <hr class="h-[2px] bg-orange-300 border-none" />
+      <div class="flex justify-between">
+        <img class="" src="img/kurvbillede.png" alt="" />
+        <h5 class="text-deskH5 font-text font-semibold">Pris</h5>
+        <h5 class="text-deskH5 font-text font-semibold">Mængde</h5>
+        <h5 class="text-deskH5 font-text font-semibold">Fjern</h5>
+        <h5 class="text-deskH5 font-text font-semibold">Total</h5>
+      </div>
+    </section>
+  </main>
+</MainLayout>
