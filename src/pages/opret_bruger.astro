@@ -13,15 +13,17 @@ import Banner from "../components/Banner.astro";
     <title>Opret bruger</title>
   </head>
   <Banner />
-  <body class="bg-beige300">
+  <body class="bg-beige300 overflow-x-hidden">
     <main
       class="mx-space30 sm:mx-spaceMarginx mt-spaceMarginTop grid place-content-center mb-space90"
     >
-      <h1 class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space40">
+      <h1
+        class="lg:text-deskH1 text-mobileH1 font-bold font-text pb-space40 lg:text-center"
+      >
         Opret bruger
       </h1>
 
-      <form action="">
+      <form class="grid place-content-center" action="">
         <!-- fornavn  -->
         <div class="mt-space20">
           <label
