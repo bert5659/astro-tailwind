@@ -1,5 +1,5 @@
 ---
-const { titel, producent, pris, pic = "vin" } = Astro.props;
+const { titel, producent, pris, pic, udsolgt, tilbud = "vin" } = Astro.props;
 import Button from "../components/Button.astro";
 ---
 
@@ -7,6 +7,7 @@ import Button from "../components/Button.astro";
   <div class="">
     <img class="" src={`/img/produktbilleder/${pic}_pic-100.webp`} alt="" />
   </div>
+
   <div
     class="bg-beige400 pb-space25 flex items-center flex-col w-[300px] lg:pb-space25"
   >
@@ -19,4 +20,18 @@ import Button from "../components/Button.astro";
     </h4>
     <Button variant="primary" knapTekst="Tilføj til kurv" kurv={false} />
   </div>
+  {
+    tilbud == true && (
+      <div class="absolute mr-[150px] mt-space20 text-mobileH1 w-[100px] ">
+        <img src="/img/tilbud.svg" alt="tilbudikon" />
+      </div>
+    )
+  }
+  {
+    udsolgt == true && (
+      <div class="absolute mr-[150px] mt-space20 text-mobileH1 w-[100px] ">
+        <img src="/img/udsolgt.svg" alt="tilbudikon" />
+      </div>
+    )
+  }
 </div>
