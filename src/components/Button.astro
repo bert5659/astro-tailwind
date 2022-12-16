@@ -1,8 +1,9 @@
 ---
-const { variant, knapTekst, kurv } = Astro.props;
+const { variant, href, knapTekst, kurv } = Astro.props;
 ---
 
-<button
+<a
+  href={href}
   data-variant={variant}
   class="bg-slate-200 text-xl font-bold font-dosis text-white p-2 rounded voresKnap"
   >{
@@ -15,7 +16,7 @@ const { variant, knapTekst, kurv } = Astro.props;
   <h4 class="font-text text-deskH4">
     {knapTekst}
   </h4>
-</button>
+</a>
 
 <style>
   .voresKnap {

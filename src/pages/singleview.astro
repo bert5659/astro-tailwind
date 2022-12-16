@@ -5,5 +5,41 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout>
-  <div class="hej"></div>
+  <section class="flex flex-col items-center gap-space25">
+    <article id="single_img">
+      <div class="single_img_wrapper max-w-[300px]">
+        <img src="../img/singleview_mobil.png" alt="produktbillede af cider" />
+      </div>
+    </article>
+    <article id="single_tekst">
+      <div class="single_tekst_wrapper flex flex-col gap-space25">
+        <h1 class="font-text font-bold text-mobileH1 text-black600">
+          Cidrerie de l’Apothicaire
+        </h1>
+        <h2 class="pris font-text font-semibold text-mobileH2 text-grey500">
+          169 kr.
+        </h2>
+        <p class="font-text flex flex-col text-black500 text-mobileP">
+          Cideren er vildgæret og økologisk, og har en fed gæret sprød smag, med
+          en let naturlig aroma. Hors-Norme er La Ciderie de Golfes klassiske
+          cider. La Ciderie de Golfe er en lille naturciderproducent ledet af
+          Marc Abel, som producerer alt på tradionelt low-tech metode, hvor alt
+          er vildgæret og økologisk.
+        </p>
+        <div class="info">
+          <p class="font-text text-mobileP text-black500">
+            <span class="font-bold">Område:</span> Bretagne, Frankrig
+          </p>
+          <p class="font-text text-mobileP text-black500">
+            <span class="font-bold">Vol:</span> 5,5 %
+          </p>
+        </div>
+      </div>
+      <div id="container">
+        <button id="minus">-</button>
+        <span id="number">0</span>
+        <button id="plus">+</button>
+      </div>
+    </article>
+  </section>
 </MainLayout>
