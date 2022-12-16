@@ -1,6 +1,20 @@
-html,
+/* html,
 body {
   overflow-x: hidden;
+} */
+
+.hejhej:hover {
+  filter: drop-shadow(-10px 10px 0px #3e4349);
+  transition: 100ms ease-in-out;
+}
+
+.cta-btn2 {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 40%;
+  margin: auto;
+  z-index: 1;
 }
 
 header {
@@ -76,7 +90,7 @@ header {
   top: 0;
   left: 0;
   opacity: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: all 0.7s ease-in-out;
   visibility: hidden;
   z-index: 10;

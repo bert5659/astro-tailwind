@@ -55,12 +55,14 @@ import Button from "../components/Button.astro";
           leggings fashion axe meditation YOLO migas. Brooklyn meh marfa
           dreamcatcher crucifix cornhole, typewriter.
         </p>
-        <div class="cta-btn">
-          <Button
-            variant="secondary"
-            knapTekst="Se cidershoppen!"
-            kurv={false}
-          />
+        <div class="cta-btn flex justify-start">
+          <div class="relative">
+            <a
+              class="cta-btn2 text-deskH3 font-text font-bold text-center text-white"
+              href="#">Se cidershoppen!</a
+            >
+            <img class="hejhej" src="../img/cta-vector.svg" alt="" />
+          </div>
         </div>
       </div>
       <div class="w-full flex items-end">
@@ -81,7 +83,9 @@ import Button from "../components/Button.astro";
         <img src="../img/mission.webp" alt="billede af ejerne" />
       </div>
       <div class="mission_tekst flex flex-col gap-space25 lg:ml-space25">
-        <h3 class="text-black500 font-text text-mobileH2 font-semibold">
+        <h3
+          class="text-black500 font-text text-mobileH2 lg:text-deskH2 font-semibold"
+        >
           Vores mission
         </h3>
         <p class="font-text text-black500 text-mobileP max-w-[550px]">
@@ -93,14 +97,17 @@ import Button from "../components/Button.astro";
         <Button variant="primary" knapTekst="OM OS" kurv={false} />
       </div>
     </article>
+
     <article
       class="dyk_ned flex flex-col gap-space25 lg:flex-row-reverse lg:items-center"
     >
       <div class="dyk_ned_img">
         <img src="../img/dyk_ned.webp" alt="billede af cider på en stol" />
       </div>
-      <div class="mission_tekst flex flex-col gap-space25">
-        <h3 class="text-black500 font-text text-mobileH2 font-semibold">
+      <div class="mission_tekst flex flex-col gap-space25 max-w-[550px]">
+        <h3
+          class="text-black500 font-text text-mobileH2 lg:text-deskH2 font-semibold"
+        >
           Dyk ned i ciderverdenen
         </h3>
         <p class="font-text text-black500 text-mobileP max-w-[550px]">
@@ -111,75 +118,85 @@ import Button from "../components/Button.astro";
         <Button variant="primary" knapTekst="BESØG CIDERSKOLEN" kurv={false} />
       </div>
     </article>
-    <article class="testimonials_wrapper bg-beige400 p-space25">
-      <h3
-        class="font-semibold font-text text-mobileH2 text-black500 pb-space25"
+    <div class="flex flex-col w-full items-center">
+      <article
+        class="testimonials_wrapper w-fit bg-beige400 rounded-cornerRound p-space25 flex flex-col items-center"
       >
-        Anmeldelser fra vores kunder
-      </h3>
-      <div class="flex flex-col gap-space25 rounded-cornerRound lg:flex-row">
-        <div class="maya flex flex-col gap-space10">
-          <h4 class="font-semibold font-text text-mobileH4 text-black500">
-            Maya N.
-          </h4>
-          <p class="font-text text-black500 text-mobileP max-w-[300px]">
-            “Fantastiske cidere og virkelig god service. Ciderrevolutionen var
-            virkelig gode til at hjælpe med at finde den helt rigtige cider. Kan
-            varmt anbefales herfra”
-          </p>
-          <div class="apples_img pt-space10 pb-space20">
-            <img
-              src="../img/apples.png"
-              alt="5 stjerner illustreret som æbler"
-            />
+        <h3
+          class="font-semibold font-text lg:text-deskH2 text-mobileH2 text-black500 pb-space50"
+        >
+          Anmeldelser fra vores kunder
+        </h3>
+        <div class="flex flex-col gap-space25 lg:flex-row">
+          <div class="maya flex flex-col gap-space10">
+            <h4 class="font-semibold font-text text-mobileH4 text-black500">
+              Maya N.
+            </h4>
+            <p class="font-text text-black500 text-mobileP max-w-[300px]">
+              “Fantastiske cidere og virkelig god service. Ciderrevolutionen var
+              virkelig gode til at hjælpe med at finde den helt rigtige cider.
+              Kan varmt anbefales herfra”
+            </p>
+            <div class="apples_img pt-space10 pb-space20">
+              <img
+                src="../img/apples.png"
+                alt="5 stjerner illustreret som æbler"
+              />
+            </div>
+          </div>
+          <div class="pernille flex flex-col gap-space10">
+            <h4 class="font-semibold font-text text-mobileH4 text-black500">
+              Pernille N.
+            </h4>
+            <p class="font-text text-black500 text-mobileP max-w-[300px]">
+              “Really good selection of ciders. Perfect for connoisseurs AND
+              everyone wanting to know more about the fruity stuff”
+            </p>
+            <div class="apples_img pt-space10 pb-space20">
+              <img
+                src="../img/apples.png"
+                alt="5 stjerner illustreret som æbler"
+              />
+            </div>
+          </div>
+          <div class="pernille flex flex-col gap-space10">
+            <h4 class="font-semibold font-text text-mobileH4 text-black500">
+              Jimmy C.
+            </h4>
+            <p class="font-text text-black500 text-mobileP max-w-[300px]">
+              "Stort udvalg, kompetent betjening, folk der går virkeligt meget
+              op i at gøre Danmark til et cider-land"
+            </p>
+            <div class="apples_img pt-space10 pb-space20">
+              <img
+                src="../img/apples.png"
+                alt="5 stjerner illustreret som æbler"
+              />
+            </div>
           </div>
         </div>
-        <div class="pernille flex flex-col gap-space10">
-          <h4 class="font-semibold font-text text-mobileH4 text-black500">
-            Pernille N.
-          </h4>
-          <p class="font-text text-black500 text-mobileP max-w-[300px]">
-            “Really good selection of ciders. Perfect for connoisseurs AND
-            everyone wanting to know more about the fruity stuff”
-          </p>
-          <div class="apples_img pt-space10 pb-space20">
-            <img
-              src="../img/apples.png"
-              alt="5 stjerner illustreret som æbler"
-            />
-          </div>
-        </div>
-        <div class="pernille flex flex-col gap-space10">
-          <h4 class="font-semibold font-text text-mobileH4 text-black500">
-            Jimmy C.
-          </h4>
-          <p class="font-text text-black500 text-mobileP max-w-[300px]">
-            "Stort udvalg, kompetent betjening, folk der går virkeligt meget op
-            i at gøre Danmark til et cider-land"
-          </p>
-          <div class="apples_img pt-space10 pb-space20">
-            <img
-              src="../img/apples.png"
-              alt="5 stjerner illustreret som æbler"
-            />
-          </div>
-        </div>
-      </div>
-    </article>
-    <article class="i_tvivl flex flex-col gap-space25">
+      </article>
+    </div>
+    <article
+      class="i_tvivl flex flex-col gap-space25 lg:flex-row lg:items-center"
+    >
       <div class="i_tvivl_img">
         <img src="../img/i_tvivl.webp" alt="billede af en masse cidere" />
       </div>
-      <div class="i_tvivl_tekst flex flex-col gap-space25">
-        <h3 class="text-black500 font-text text-mobileH2 font-semibold">
+      <div
+        class="i_tvivl_tekst flex flex-col gap-space25 lg:ml-space25 max-w-[550px]"
+      >
+        <h3
+          class="text-black500 lg:text-deskH2 font-text text-mobileH2 font-semibold"
+        >
           Er du i tvivl om hvad du skal vælge?
         </h3>
         <p class="font-text text-black500 text-mobileP max-w-[550px]">
           Så prøv vores introduktionskasse til cider. Her har vi sammensat nogle
           af de bedste cidere inden for hver deres genre.
         </p>
+        <Button variant="primary" knapTekst="PRØV EN SMAGEKASSE" kurv={false} />
       </div>
-      <Button variant="primary" knapTekst="PRØV EN SMAGEKASSE" kurv={false} />
     </article>
   </section>
 </MainLayout>
