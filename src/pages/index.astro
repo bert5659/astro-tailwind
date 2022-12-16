@@ -1,17 +1,15 @@
 ---
 // Component Imports
-import Card from "../components/Card.astro";
+
 import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/global.css";
-import Cookie from "../components/Cookie.astro";
-import Overatten from "../components/Overatten.astro";
 import Button from "../components/Button.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<MainLayout>
+<MainLayout title="Ciderrevolution - Forside">
   <section id="splash_mobile">
     <div class="flex flex-col items-center justify-center">
       <article class="flex flex-col gap-space20">
@@ -50,7 +48,7 @@ import Button from "../components/Button.astro";
         <h2 class="text-deskH2 font-semibold font-text text-black500">
           Cider der smager af meget mere
         </h2>
-        <p class="text-deskP font-text text-black500 max-w-[550px]">
+        <p class="text-mobileP font-text text-black500 max-w-[550px]">
           I'm baby chartreuse aesthetic gentrify actually heirloom lyft,
           leggings fashion axe meditation YOLO migas. Brooklyn meh marfa
           dreamcatcher crucifix cornhole, typewriter.
@@ -72,6 +70,9 @@ import Button from "../components/Button.astro";
       </div>
     </article>
   </section>
+  <article class="grid h-screen place-items-center">
+    <button class="nyButton p-space160">HEJEHEJEHEJEHEJ</button>
+  </article>
   <section
     id="mission_etc_container"
     class="mt-space80 flex flex-col gap-space80"

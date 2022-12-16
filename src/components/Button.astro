@@ -4,7 +4,7 @@ const { variant, knapTekst, kurv } = Astro.props;
 
 <button
   data-variant={variant}
-  class="bg-slate-200 text-xl font-bold font-dosis text-white p-2 rounded"
+  class="bg-slate-200 text-xl font-bold font-dosis text-white p-2 rounded voresKnap"
   >{
     kurv == true && (
       <div class="icon">
@@ -18,6 +18,14 @@ const { variant, knapTekst, kurv } = Astro.props;
 </button>
 
 <style>
+  .voresKnap {
+    transition: 200ms ease-in-out;
+  }
+  .voresKnap:hover {
+    box-shadow: 10px 10px 0px 0px rgba(51, 51, 51, 1);
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(51, 51, 51, 1);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(51, 51, 51, 1);
+  }
   [data-variant="primary"] {
     display: flex;
     justify-content: center;
