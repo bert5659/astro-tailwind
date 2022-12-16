@@ -33,6 +33,8 @@ import Banner from "../components/Banner.astro";
           >
           <input
             type="text"
+            inputmode="text"
+            name="Fornavn"
             id="fornavn"
             class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
             placeholder="Jean-Pierre"
@@ -48,6 +50,8 @@ import Banner from "../components/Banner.astro";
           >
           <input
             type="text"
+            inputmode="text"
+            name="Efternavn"
             id="efternavn"
             class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
             placeholder="Jørgensen"
@@ -63,6 +67,8 @@ import Banner from "../components/Banner.astro";
           >
           <input
             type="text"
+            inputmode="email"
+            name="Email"
             id="email"
             class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
             placeholder="C-revolution@mail.dk"
@@ -77,6 +83,8 @@ import Banner from "../components/Banner.astro";
           >
           <input
             type="tel"
+            inputmode="tel"
+            name="tlf nummer"
             id="tel"
             class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
             placeholder="+45"
@@ -91,6 +99,8 @@ import Banner from "../components/Banner.astro";
           >
           <input
             type="password"
+            inputmode="text"
+            name="password"
             id="password"
             class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
             placeholder="•••••••••"
@@ -107,9 +117,9 @@ import Banner from "../components/Banner.astro";
             <input
               type="password"
               id="gentagpassword"
+              name="Gentag password"
               class="max-w-[380px] bg-white border border-grey300 text-black500 text-sm rounded-[5px] hover:drop-shadow-md ease-in duration-300 focus:ring-black500 focus:border-black500 block w-full p-[6px]"
               placeholder="•••••••••"
-              required
             />
             <!-- checkboks  -->
             <div class="pt-space15">
