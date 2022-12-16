@@ -55,8 +55,8 @@ body {
 
 header {
   padding-top: 10px;
-  margin-left: 6rem;
-  margin-right: 6rem;
+  margin-left: 6.2rem;
+  margin-right: 6.2rem;
   background-color: inherit;
 }
 
@@ -78,6 +78,9 @@ header {
   /* Other styles... */
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+}
+
+.navPaddintop {
 }
 
 #top-button.visible {
@@ -147,7 +150,7 @@ header {
   top: 0;
   left: 0;
   opacity: 0;
-  /* overflow: hidden; */
+  overflow: hidden;
   transition: all 0.7s ease-in-out;
   visibility: hidden;
   z-index: 10;
