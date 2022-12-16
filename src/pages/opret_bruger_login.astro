@@ -13,10 +13,13 @@ import Button from "../components/Button.astro";
       class="md:grid md:place-content-center md:border-r-2 md:border-green300"
     >
       <div class="pb-space15">
-        <Button variant="primary" knapTekst="Opret Bruger" kurv={false} />
+        <a href="/opret_bruger">
+          <Button variant="primary" knapTekst="Opret Bruger" kurv={false} />
+        </a>
       </div>
-      <a class="text-link underline font-medium text-blue300" href=""
-        >Fortsæt som gæst</a
+      <a
+        class="text-link underline font-medium text-blue300"
+        href="/opret_bruger">Fortsæt som gæst</a
       >
     </div>
     <!-- 2fr grid  -->
@@ -72,7 +75,9 @@ import Button from "../components/Button.astro";
       </form>
 
       <div class="pt-space15">
-        <Button variant="primary" knapTekst="Login" kurv={false} />
+        <a href="/hvordan_kontakt">
+          <Button variant="primary" knapTekst="Login" kurv={false} />
+        </a>
       </div>
       <div class="pt-space15">
         <a
