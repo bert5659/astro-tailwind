@@ -62,12 +62,11 @@ header {
   border-radius: 50%;
 }
 #top-button {
-  /* Other styles... */
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-
-.navPaddintop {
+#top-button2 {
+  opacity: 1;
 }
 
 #top-button.visible {
@@ -249,5 +248,3 @@ header {
 /* .testimonials_wrapper {
   width: 100vw;
 } */
-.kategoriButton {
-}
