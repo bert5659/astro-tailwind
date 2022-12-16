@@ -1,3 +1,19 @@
+.minus123 {
+  transition: 200ms ease-in-out;
+}
+
+.minus123:active {
+  background-color: beige;
+}
+
+.plus123 {
+  transition: 200ms ease-in-out;
+}
+
+.plus123:active {
+  background-color: beige;
+}
+
 #kontakt.active123 {
   visibility: visible;
 }
@@ -209,6 +225,11 @@ header {
   place-items: center;
   width: 100%;
   gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+.anbefalede_wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }

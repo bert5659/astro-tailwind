@@ -4,6 +4,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/global.css";
 import Button from "../components/Button.astro";
+import Banner from "../components/Banner.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -54,9 +55,11 @@ import Button from "../components/Button.astro";
           dreamcatcher crucifix cornhole, typewriter.
         </p>
         <div class="cta-btn flex justify-start">
-          <button class="nyButton p-space50 font-bold font-text text-deskH4"
-            >Se cidershoppen!</button
-          >
+          <a href="/shop">
+            <button class="nyButton p-space50 font-bold font-text text-deskH4"
+              >Se cidershoppen!</button
+            >
+          </a>
         </div>
       </div>
       <div class="w-full flex items-end">
@@ -66,6 +69,7 @@ import Button from "../components/Button.astro";
       </div>
     </article>
   </section>
+
   <section
     id="mission_etc_container"
     class="mt-space80 flex flex-col gap-space80"
