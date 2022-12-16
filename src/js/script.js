@@ -4,6 +4,8 @@ const mainHeader = document.querySelector("header");
 const logo = document.querySelector(".logo");
 const html = document.querySelector("html");
 const body = document.querySelector("body");
+const divMail = document.getElementById("mail_check");
+const divTel = document.getElementById("tel_check");
 
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
