@@ -30,11 +30,13 @@ import Button from "../components/Button.astro";
           knapTekst="Om cider"
           kurv={false}
         />
-        <Button
-          variant="primary_ciderskolen"
-          knapTekst="Lav din egen cider"
-          kurv={false}
-        />
+        <a class="flex flex-col w-full" href="/lavcider">
+          <Button
+            variant="primary_ciderskolen"
+            knapTekst="Lav din egen cider"
+            kurv={false}
+          />
+        </a>
         <Button variant="primary_ciderskolen" knapTekst="Blog" kurv={false} />
       </div>
     </div>
