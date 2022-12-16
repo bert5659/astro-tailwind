@@ -90,9 +90,10 @@ import Banner from "../components/Banner.astro";
 
         if (divMail.style.backgroundColor === "") {
           divMail.style.backgroundColor = "#D5E8DA";
-          kontakt.classList.toggle("active123");
+          kontakt.classList.add("active123");
         } else {
           divMail.style.backgroundColor = "";
+          kontakt.classList.remove("active123");
         }
       }
 
