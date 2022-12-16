@@ -41,6 +41,7 @@ import Banner from "../components/Banner.astro";
           <div class="hover:translate-y-[-10px] ease-in-out duration-200">
             <div
               id="mail_check"
+              tabindex="1"
               class="w-[170px] h-[170px] grid justify-center hover:cursor-pointer shadow-md rounded-cornerRound"
             >
               <img src="../img/mail.svg" alt="" />
@@ -53,6 +54,7 @@ import Banner from "../components/Banner.astro";
         <div class="pt-space40 flex justify-center">
           <div class="hover:translate-y-[-10px] ease-in-out duration-200">
             <div
+              tabindex="2"
               id="tel_check"
               class="w-[170px] h-[170px] grid justify-center hover:cursor-pointer bg-beige300 shadow-md rounded-cornerRound"
             >
@@ -109,6 +111,36 @@ import Banner from "../components/Banner.astro";
           divTel.style.backgroundColor = "";
         }
       }
+
+      // denne kode er laant fra W3schools ( vi bruger den til a11y) for at kunne klikke med enter på mail el sms
+      // https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+      // Get the input field
+      var input = document.getElementById("mail_check");
+
+      // Execute a function when the user presses a key on the keyboard
+      input.addEventListener("keypress", function (event) {
+        // If the user presses the "Enter" key on the keyboard
+        if (event.key === "Enter") {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("mail_check").click();
+        }
+      });
+
+      // Get the input field
+      var input = document.getElementById("tel_check");
+
+      // Execute a function when the user presses a key on the keyboard
+      input.addEventListener("keypress", function (event) {
+        // If the user presses the "Enter" key on the keyboard
+        if (event.key === "Enter") {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("tel_check").click();
+        }
+      });
     </script>
   </body>
 </html>
