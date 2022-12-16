@@ -34,12 +34,54 @@ import Button from "../components/Button.astro";
             <span class="font-bold">Vol:</span> 5,5 %
           </p>
         </div>
-      </div>
-      <div id="container">
-        <button id="minus">-</button>
-        <span id="number">0</span>
-        <button id="plus">+</button>
+        <div class="flex flex-col w-full items-center">
+          <div
+            id="container"
+            class="flex border-green100 border-2 w-[75%] justify-between"
+          >
+            <button
+              class="font-bold px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+              id="minus">-</button
+            >
+            <span
+              class="font-bold font-text px-space10 text-mobileH3 text-black500"
+              id="number">0</span
+            >
+            <button
+              class="font-bold px-space10 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+              id="plus">+</button
+            >
+          </div>
+        </div>
+        <div class="flex w-full justify-center">
+          <Button
+            href="/kurv"
+            variant="primary"
+            knapTekst="Tilføj til kurv"
+            kurv={true}
+          />
+        </div>
       </div>
     </article>
   </section>
+  <script>
+    let number = 0;
+
+    const minusButton = document.querySelector("#minus");
+    const plusButton = document.querySelector("#plus");
+    const numberElement = document.querySelector("#number");
+
+    minusButton.addEventListener("click", () => {
+      if (number === 0) {
+        return;
+      }
+      number--;
+      numberElement.textContent = number.toString();
+    });
+
+    plusButton.addEventListener("click", () => {
+      number++;
+      numberElement.textContent = number.toString();
+    });
+  </script>
 </MainLayout>
