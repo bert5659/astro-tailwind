@@ -1,17 +1,15 @@
 ---
 // Component Imports
-import Card from "../components/Card.astro";
+
 import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/global.css";
-import Cookie from "../components/Cookie.astro";
-import Overatten from "../components/Overatten.astro";
 import Button from "../components/Button.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<MainLayout>
+<MainLayout title="Ciderrevolution - Forside">
   <section id="splash_mobile">
     <div class="flex flex-col items-center justify-center">
       <article class="flex flex-col gap-space20">
@@ -26,12 +24,12 @@ import Button from "../components/Button.astro";
             <img class="" src="../img/splash.svg" alt="" />
           </div>
         </div>
-        <div class="w-full justify-center flex">
-          <Button
-            variant="secondary"
-            knapTekst="Se cidershoppen!"
-            kurv={false}
-          />
+        <div class="cta-btn flex justify-center">
+          <a href="/shop">
+            <button class="nyButton p-space50 font-bold font-text text-deskH4"
+              >Se cidershoppen!</button
+            >
+          </a>
         </div>
         <p class="text-mobileP font-text text-black500 max-w-[550px]">
           I'm baby chartreuse aesthetic gentrify actually heirloom lyft,
@@ -50,19 +48,15 @@ import Button from "../components/Button.astro";
         <h2 class="text-deskH2 font-semibold font-text text-black500">
           Cider der smager af meget mere
         </h2>
-        <p class="text-deskP font-text text-black500 max-w-[550px]">
+        <p class="text-mobileP font-text text-black500 max-w-[550px]">
           I'm baby chartreuse aesthetic gentrify actually heirloom lyft,
           leggings fashion axe meditation YOLO migas. Brooklyn meh marfa
           dreamcatcher crucifix cornhole, typewriter.
         </p>
         <div class="cta-btn flex justify-start">
-          <div class="relative">
-            <a
-              class="cta-btn2 text-deskH3 font-text font-bold text-center text-white"
-              href="#">Se cidershoppen!</a
-            >
-            <img class="hejhej" src="../img/cta-vector.svg" alt="" />
-          </div>
+          <button class="nyButton p-space50 font-bold font-text text-deskH4"
+            >Se cidershoppen!</button
+          >
         </div>
       </div>
       <div class="w-full flex items-end">
