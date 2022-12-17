@@ -5,7 +5,7 @@ const { variant, href, knapTekst, kurv } = Astro.props;
 <a
   href={href}
   data-variant={variant}
-  class="bg-slate-200 text-xl font-bold font-dosis text-white p-2 rounded voresKnap"
+  class="font-bold font-dosis cursor-pointer text-white p-2 voresKnap"
   >{
     kurv == true && (
       <div class="icon">
@@ -32,7 +32,6 @@ const { variant, href, knapTekst, kurv } = Astro.props;
   }
   [data-variant="primary"] {
     display: flex;
-
     justify-content: center;
     gap: 20px;
     align-items: center;
