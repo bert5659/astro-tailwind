@@ -2,6 +2,9 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      cursor: {
+        mincursor: "url(https://bertilserveau.dk/laesmere.svg) 0 0, pointer",
+      },
       colors: {
         red600: "#874427",
         red500: "#9B4925",
