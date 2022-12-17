@@ -19,7 +19,7 @@ import Button from "../components/Button.astro";
       >
         Ciderskolen
       </h1>
-      <p class="max-w-[550px] font-text text-deskP">
+      <p class="max-w-[550px] font-text text-mobileP">
         Lær alt om, hvordan du laver cider, dyk ned ciderens forunderlige
         historie eller læs vores mange spændende blogindlæg om alt, hvad der
         hedder cider.
@@ -41,8 +41,12 @@ import Button from "../components/Button.astro";
         <Button variant="primary_ciderskolen" knapTekst="Blog" kurv={false} />
       </div>
     </div>
-    <div class="lg:grid place-items-center content-center hidden">
-      <img src="../img/skilt.svg" alt="skilt dekorativt" />
+    <div class="lg:flex items-center justify-center w-full hidden">
+      <img
+        class="max-w-[270px]"
+        src="../img/skilt.svg"
+        alt="skilt dekorativt"
+      />
     </div>
   </div>
 </MainLayout>
