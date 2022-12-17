@@ -1,14 +1,27 @@
 ---
-const { titel, producent, pris, pic, udsolgt, tilbud = "vin" } = Astro.props;
+const {
+  titel,
+  producent,
+  pris,
+  pic,
+  pic_hovered,
+  udsolgt,
+  tilbud = "vin",
+} = Astro.props;
 import Button from "../components/Button.astro";
 ---
 
 <div class="flex items-center flex-col w-[300px]">
-  <a href="/singleview">
-    <div class="">
+  <a id="my-card" href="/singleview">
+    <div class="image">
       <img
-        class="cursor-mincursor"
+        class="cursor-mincursor default"
         src={`/img/produktbilleder/${pic}_pic-100.webp`}
+        alt=""
+      />
+      <img
+        class="cursor-mincursor hovered"
+        src={`/img/produktbilleder/${pic_hovered}_pic-100.webp`}
         alt=""
       />
     </div>
