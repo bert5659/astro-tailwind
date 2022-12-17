@@ -5,7 +5,29 @@ import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 ---
 
-<MainLayout>
-  <img class="cursor-mincursor" src="img/kurvbillede.png" alt="" />
-  <script></script>
-</MainLayout>
+<!-- script der ændre title  -->
+<html>
+  <head>
+    <title>Du har bobler i kurven</title>
+    <script>
+      function changeTitle() {
+        // Check if the current title is "Du har bobler i kurven"
+        if (document.title === "Du har bobler i kurven") {
+          // If it is, change it to "Cidershoppen"
+          document.title = "Husk dine bobler!";
+        } else {
+          // If it isn't, change it to "Du har bobler i kurven"
+          document.title = "Du har bobler i kurven";
+        }
+      }
+
+      // Call the changeTitle() function every 2 seconds (2000 milliseconds)
+      setInterval(changeTitle, 2000);
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to the Cider Shop</h1>
+  </body>
+</html>
+
+<!-- slut  -->
