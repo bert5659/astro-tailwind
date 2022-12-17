@@ -73,9 +73,9 @@ let { title } = Astro.props;
         sessionStorage.setItem("fjerncookieboks", true);
       }
 
-      // if (sessionStorage.getItem("fjerncookieboks")) {
-      //   cookieboks.classList.add("hidden");
-      // }
+      if (sessionStorage.getItem("fjerncookieboks")) {
+        cookieboks.classList.add("hidden");
+      }
     </script>
   </body>
 </html>
