@@ -15,9 +15,12 @@ import Button from "../components/Button.astro";
       class="md:grid md:place-content-center md:border-r-2 md:border-green300"
     >
       <div class="pb-space15">
-        <a href="/opret_bruger">
-          <Button variant="primary" knapTekst="Opret Bruger" kurv={false} />
-        </a>
+        <Button
+          variant="primary"
+          href="/opret_bruger"
+          knapTekst="Opret bruger"
+          kurv={false}
+        />
       </div>
       <a
         class="text-link underline font-medium text-blue300"
@@ -79,9 +82,12 @@ import Button from "../components/Button.astro";
       </form>
 
       <div class="pt-space15">
-        <a href="/hvordan_kontakt">
-          <Button variant="primary" knapTekst="Login" kurv={false} />
-        </a>
+        <Button
+          variant="primary"
+          href="/hvordan_kontakt"
+          knapTekst="Login"
+          kurv={false}
+        />
       </div>
       <div class="pt-space15">
         <a

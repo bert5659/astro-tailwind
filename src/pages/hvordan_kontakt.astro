@@ -68,9 +68,12 @@ import Banner from "../components/Banner.astro";
         id="kontakt"
         class="btn_kontakt w-full flex flex-col invisible items-center pt-space80"
       >
-        <a href="/vaelglevering">
-          <Button variant="primary" knapTekst="Levering" kurv={false} />
-        </a>
+        <Button
+          variant="primary"
+          href="/vaelglevering"
+          knapTekst="Levering"
+          kurv={false}
+        />
       </div>
       <p
         class="font-text text-xscopy text-black500 text-center pt-space20 md:pt-space160"
