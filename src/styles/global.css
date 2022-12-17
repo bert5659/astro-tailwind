@@ -1,3 +1,19 @@
+#my-card .image .default {
+  display: block;
+}
+
+#my-card .image .hovered {
+  display: none;
+}
+
+#my-card:hover .image .default {
+  display: none;
+}
+
+#my-card:hover .image .hovered {
+  display: block;
+}
+
 .minus123 {
   transition: 200ms ease-in-out;
 }
