@@ -123,31 +123,77 @@ import KategoriButton from "../components/KategoriButton.astro";
         Smagskasser
       </h2>
     </div>
-    <!-- <hr class="mb-space50 h-[2px] border-none bg-orange-400" /> -->
-    <div class="smage-items">
-      <Card
-        titel="3 fantastiske cidere"
-        producent="Fra danske producenter"
-        pris="DKK 600"
-        pic="danskkasse_et"
-        pic_hovered="danskkasse_info"
-        tilbud={true}
-      />
-      <Card
-        titel="3 vilde cidere"
-        producent="Fra franske producenter"
-        pris="DKK 475"
-        pic="franskkasse_to"
-        pic_hovered="franskkasse_info"
-      />
-      <Card
-        titel="Alkoholfri ciderkasse"
-        producent="Danske og franske"
-        pris="DKK 455"
-        pic="startkasse_tre"
-        pic_hovered="alkoholfri_info"
-      />
-    </div>
+
+    <!-- Modal -->
+    <dialog class="modal bg-beige300" id="modal">
+      <div class="flex flex-col">
+        <div class="w-[424pxpx]">
+          <h3 class="text-deskH3 flex justify-center text-green300">
+            Tilføjet til kurv
+          </h3>
+        </div>
+        <div class="flex items-center gap-space30">
+          <div>
+            <img
+              class="w-[140px] my-space30"
+              src="img/produktbilleder/danskkasse_et_pic-100.webp"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col gap-space30">
+            <h5 class="text-deskH5 font-text">
+              <span class="font-text font-bold mr-space10">Navn:</span
+              >Ciderkasse 12 - stk
+            </h5>
+            <h5 class="text-deskH5 font-text">
+              <span class="font-text font-bold mr-space10">Pris:</span>140 DKK
+            </h5>
+            <h5 class="text-deskH5 font-text">
+              <span class="font-text font-bold mr-space10">Antal:</span>1
+            </h5>
+          </div>
+        </div>
+        <div class="flex gap-space25">
+          <button class="close-button">
+            <Button variant="primary" knapTekst="Køb mere" kurv={false} />
+          </button>
+          <button>
+            <Button
+              variant="primary"
+              href="/kurv"
+              knapTekst="Se kurv"
+              kurv={true}
+            />
+          </button>
+        </div>
+      </div>
+    </dialog>
+  </div>
+
+  <!-- <hr class="mb-space50 h-[2px] border-none bg-orange-400" /> -->
+  <div class="smage-items">
+    <Card
+      titel="3 fantastiske cidere"
+      producent="Fra danske producenter"
+      pris="DKK 600"
+      pic="danskkasse_et"
+      pic_hovered="danskkasse_info"
+      tilbud={true}
+    />
+    <Card
+      titel="3 vilde cidere"
+      producent="Fra franske producenter"
+      pris="DKK 475"
+      pic="franskkasse_to"
+      pic_hovered="franskkasse_info"
+    />
+    <Card
+      titel="Alkoholfri ciderkasse"
+      producent="Danske og franske"
+      pris="DKK 455"
+      pic="startkasse_tre"
+      pic_hovered="alkoholfri_info"
+    />
   </div>
 
   <!-- Fransk -->
