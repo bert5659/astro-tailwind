@@ -2,6 +2,7 @@
 import Banner from "../components/Banner.astro";
 import FooterCider from "../components/FooterCider.astro";
 import Header from "../components/Header.astro";
+import Button from "../components/Button.astro";
 import "../styles/global.css";
 
 let { title } = Astro.props;
@@ -26,6 +27,37 @@ let { title } = Astro.props;
     <script src="../js/script.js"></script>
   </head>
   <body class="bg-beige300 overflow-x-hidden">
+    <!-- over 18 box  -->
+
+    <div id="atten_boks">
+      <div class="fixed bg-lilac200 w-screen h-screen opacity-[90%]"></div>
+      <div
+        class="bg-lilac100 z-[1000] top-[40%] md:top-[30%] md:left-[30%] fixed p-space30 shadow-md rounded-cornerRound gap-space80 md:w-[500px] mx-space40"
+      >
+        <h1
+          class="text-center font-bold text-mobileH1 pb-space15 md:text-deskH1"
+        >
+          ER DU OVER 18?
+        </h1>
+        <h2 class="text-center text-mobileH2 pb-space15">
+          Er du gammel nok til at drikke fermenteret æblejuice?
+        </h2>
+        <div class="flex justify-center gap-space20 items-center">
+          <button
+            id="accept_atten"
+            class="bg-green300 text-white px-space20 py-space10">Ja</button
+          >
+
+          <button
+            id="deny_atten"
+            class="bg-grey400 text-white px-space20 py-space10">Nej :-(</button
+          >
+        </div>
+      </div>
+    </div>
+
+    <script></script>
+
     <!-- cookiebox -->
     <div id="cookieboks" class="">
       <div
@@ -65,6 +97,10 @@ let { title } = Astro.props;
       const denyCookie = document.querySelector("#afvis");
       const cookieboks = document.querySelector("#cookieboks");
 
+      const acceptAtten = document.querySelector("#accept_atten");
+      const denyAtten = document.querySelector("#deny_atten");
+      const Attenboks = document.querySelector("#atten_boks");
+
       acceptCookie.addEventListener("click", fjernCookieboks);
       denyCookie.addEventListener("click", fjernCookieboks);
 
@@ -75,6 +111,18 @@ let { title } = Astro.props;
 
       if (sessionStorage.getItem("fjerncookieboks")) {
         cookieboks.classList.add("hidden");
+      }
+
+      acceptAtten.addEventListener("click", fjernAttenboks);
+      denyAtten.addEventListener("click", fjernAttenboks);
+
+      function fjernAttenboks() {
+        Attenboks.classList.add("hidden");
+        sessionStorage.setItem("fjernAttenboks", true);
+      }
+
+      if (sessionStorage.getItem("fjernAttenboks")) {
+        Attenboks.classList.add("hidden");
       }
     </script>
   </body>
