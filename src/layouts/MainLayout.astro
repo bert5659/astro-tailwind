@@ -109,6 +109,7 @@ let { title } = Astro.props;
         sessionStorage.setItem("fjerncookieboks", true);
       }
 
+      // udkommenter herfra hvis den skal komme hele tiden
       if (sessionStorage.getItem("fjerncookieboks")) {
         cookieboks.classList.add("hidden");
       }
@@ -121,6 +122,7 @@ let { title } = Astro.props;
         sessionStorage.setItem("fjernAttenboks", true);
       }
 
+      // udkommenter herfra hvis den skal komme hele tiden
       if (sessionStorage.getItem("fjernAttenboks")) {
         Attenboks.classList.add("hidden");
       }
