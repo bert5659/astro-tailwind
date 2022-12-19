@@ -195,15 +195,15 @@ import "../styles/global.css";
             >
               <button
                 class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
-                id="minus">-</button
+                id="minus3">-</button
               >
               <span
                 class="font-bold font-text px-space10 text-mobileH3 text-black500"
-                id="number">0</span
+                id="number3">0</span
               >
               <button
                 class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
-                id="plus">+</button
+                id="plus3">+</button
               >
             </div>
           </div>
@@ -246,15 +246,15 @@ import "../styles/global.css";
             >
               <button
                 class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
-                id="minus2">-</button
+                id="minus4">-</button
               >
               <span
                 class="font-bold font-text px-space10 text-mobileH3 text-black500"
-                id="number2">0</span
+                id="number4">0</span
               >
               <button
                 class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
-                id="plus2">+</button
+                id="plus4">+</button
               >
             </div>
           </div>
@@ -317,6 +317,12 @@ import "../styles/global.css";
   const minusButton2 = document.querySelector("#minus2");
   const plusButton2 = document.querySelector("#plus2");
   const numberElement2 = document.querySelector("#number2");
+  const minusButton3 = document.querySelector("#minus3");
+  const plusButton3 = document.querySelector("#plus3");
+  const numberElement3 = document.querySelector("#number3");
+  const minusButton4 = document.querySelector("#minus4");
+  const plusButton4 = document.querySelector("#plus4");
+  const numberElement4 = document.querySelector("#number4");
 
   minusButton.addEventListener("click", () => {
     if (number === 0) {
@@ -341,5 +347,29 @@ import "../styles/global.css";
   plusButton2.addEventListener("click", () => {
     number++;
     numberElement2.textContent = number.toString();
+  });
+  minusButton3.addEventListener("click", () => {
+    if (number === 0) {
+      return;
+    }
+    number--;
+    numberElement3.textContent = number.toString();
+  });
+
+  plusButton3.addEventListener("click", () => {
+    number++;
+    numberElement3.textContent = number.toString();
+  });
+  minusButton4.addEventListener("click", () => {
+    if (number === 0) {
+      return;
+    }
+    number--;
+    numberElement4.textContent = number.toString();
+  });
+
+  plusButton4.addEventListener("click", () => {
+    number++;
+    numberElement4.textContent = number.toString();
   });
 </script>
