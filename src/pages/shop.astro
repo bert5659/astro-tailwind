@@ -126,13 +126,15 @@ import KategoriButton from "../components/KategoriButton.astro";
 
     <!-- Modal -->
     <dialog class="modal p-space40 rounded-cornerRound bg-beige400" id="modal">
-      <div class="flex flex-col">
+      <div
+        class="lg:flex max-w-[100%] flex flex-col justify-center lg:flex-col lg:w-[424px] w-[400px]"
+      >
         <div class="w-[424pxpx]">
           <h3 class="text-deskH3 flex justify-center text-green300">
             Tilføjet til kurv
           </h3>
         </div>
-        <div class="flex items-center gap-space30">
+        <div class="lg:flex lg:items-center gap-space30">
           <div>
             <img
               class="w-[140px] my-space30"
@@ -153,7 +155,9 @@ import KategoriButton from "../components/KategoriButton.astro";
             </h5>
           </div>
         </div>
-        <div class="flex gap-space25">
+        <div
+          class="lg:flex lg:flex-row place-items-center flex flex-col gap-space25"
+        >
           <button class="close-button">
             <Button variant="primary" knapTekst="Køb mere" kurv={false} />
           </button>
