@@ -156,17 +156,38 @@ import "../styles/global.css";
           <img class="" src="img/kurvbillede.png" alt="" />
         </div>
         <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Navn</h5>
+          <h5 class="text-deskH5 font-text w-[260px]">
+            Cidrerie de l’Apothicaire Amzer Zo’ Cidrerie de l’Apothicaire Amzer
+            Zo’ Cidrerie de l’Apothicaire Amzer Zo’ Cidrerie de l’Apothicaire
+            Amzer Zo’
+          </h5>
+        </div>
+        <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">Pris</h5>
           <h5 class="text-mobileH5 font-text">455 DKK</h5>
         </div>
         <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">Mængde</h5>
-          <input
-            type="number"
-            class="form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="exampleFormControlInput1"
-            placeholder="Eks. 2 stk"
-          />
+          <div class="flex flex-col items-center pb-space25">
+            <div
+              id="container"
+              class="flex border-green100 border-2 w-[150px] h-[50px] justify-between items-center"
+            >
+              <button
+                class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                id="minus">-</button
+              >
+              <span
+                class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                id="number">0</span
+              >
+              <button
+                class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                id="plus">+</button
+              >
+            </div>
+          </div>
         </div>
         <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">Fjern</h5>
@@ -186,17 +207,38 @@ import "../styles/global.css";
           <img class="" src="img/kurvbillede.png" alt="" />
         </div>
         <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Navn</h5>
+          <h5 class="text-deskH5 font-text w-[260px]">
+            Cidrerie de l’Apothicaire Amzer Zo’ Cidrerie de l’Apothicaire Amzer
+            Zo’ Cidrerie de l’Apothicaire Amzer Zo’ Cidrerie de l’Apothicaire
+            Amzer Zo’
+          </h5>
+        </div>
+        <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">Pris</h5>
           <h5 class="text-mobileH5 font-text">455 DKK</h5>
         </div>
         <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">Mængde</h5>
-          <input
-            type="number"
-            class="form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="exampleFormControlInput1"
-            placeholder="Eks. 2 stk"
-          />
+          <div class="flex flex-col items-center pb-space25">
+            <div
+              id="container"
+              class="flex border-green100 border-2 w-[150px] h-[50px] justify-between items-center"
+            >
+              <button
+                class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                id="minus2">-</button
+              >
+              <span
+                class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                id="number2">0</span
+              >
+              <button
+                class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                id="plus2">+</button
+              >
+            </div>
+          </div>
         </div>
         <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">Fjern</h5>
@@ -246,4 +288,39 @@ import "../styles/global.css";
       </div>
     </section>
   </main>
+  <script>
+    let number = 0;
+
+    const minusButton = document.querySelector("#minus");
+    const plusButton = document.querySelector("#plus");
+    const numberElement = document.querySelector("#number");
+    const minusButton2 = document.querySelector("#minus2");
+    const plusButton2 = document.querySelector("#plus2");
+    const numberElement2 = document.querySelector("#number2");
+
+    minusButton.addEventListener("click", () => {
+      if (number === 0) {
+        return;
+      }
+      number--;
+      numberElement.textContent = number.toString();
+    });
+
+    plusButton.addEventListener("click", () => {
+      number++;
+      numberElement.textContent = number.toString();
+    });
+    minusButton2.addEventListener("click", () => {
+      if (number === 0) {
+        return;
+      }
+      number--;
+      numberElement2.textContent = number.toString();
+    });
+
+    plusButton2.addEventListener("click", () => {
+      number++;
+      numberElement2.textContent = number.toString();
+    });
+  </script>
 </MainLayout>

@@ -6,9 +6,6 @@ const html = document.querySelector("html");
 const body = document.querySelector("body");
 const divMail = document.getElementById("mail_check");
 const divTel = document.getElementById("tel_check");
-const modal = document.querySelector("#modal");
-const openModal = document.querySelector(".open-button");
-const closeModal = document.querySelector(".close-button");
 
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
@@ -113,9 +110,17 @@ function makeStickyUntilOtherElementIsSticky() {
 window.addEventListener("scroll", makeStickyUntilOtherElementIsSticky);
 
 //Modal script
-openModal.addEventListener("click", () => {
-  modal.showModal();
+const modal = document.querySelector("#modal");
+
+const closeModal = document.querySelector(".close-button");
+const openModals = document.querySelectorAll(".open-button");
+
+openModals.forEach((openModal) => {
+  openModal.addEventListener("click", () => {
+    modal.showModal();
+  });
 });
+
 closeModal.addEventListener("click", () => {
   modal.close();
 });
