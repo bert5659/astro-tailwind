@@ -37,9 +37,9 @@ import Button from "../components/Button.astro";
     <h4 class="text-deskH4 font-text font-bold mb-space20 text-black600">
       {pris}
     </h4>
-    <button class="open-button">
+    <div class="open-button cursor-pointer">
       <Button variant="primary" knapTekst="Tilføj til kurv" kurv={false} />
-    </button>
+    </div>
   </div>
   {
     tilbud == true && (
