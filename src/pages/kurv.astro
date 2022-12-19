@@ -8,9 +8,13 @@ import "../styles/global.css";
   <main>
     <section class="lg:hidden" id="mobil">
       <div>
-        <a href="/shop"
-          ><Button variant="thirdy" knapTekst="Fortsæt med at handle" />
-        </a>
+        <button
+          ><Button
+            variant="thirdy"
+            href="/shop"
+            knapTekst="Fortsæt med at handle"
+          />
+        </button>
         <h1 class="text-mobileH1 font-bold mt-space50 font-text mb-space30">
           Kurv
         </h1>
@@ -30,18 +34,26 @@ import "../styles/global.css";
           <h5 class="text-mobileH5 font-text">455 DKK</h5>
         </div>
         <div class="flex justify-between">
-          <!-- <h5 class="text-mobileH5 font-semibold">Mængde</h5> -->
-          <label
-            for="exampleFormControlInput1"
-            class="form-label font-text inline-block text-mobileH5 font-semibold lg:w-[19000px]"
-            >Mængde</label
-          >
-          <input
-            type="number"
-            class="form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="exampleFormControlInput1"
-            placeholder="Eks. 2 stk"
-          />
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Mængde</h5>
+          <div class="flex flex-col items-center pb-space25">
+            <div
+              id="container"
+              class="flex border-green100 border-2 w-[150px] h-[50px] justify-between items-center"
+            >
+              <button
+                class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                id="minus">-</button
+              >
+              <span
+                class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                id="number">0</span
+              >
+              <button
+                class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                id="plus">+</button
+              >
+            </div>
+          </div>
         </div>
         <div class="flex justify-between">
           <h5 class="text-mobileH5 font-text font-semibold">Fjern</h5>
@@ -66,18 +78,26 @@ import "../styles/global.css";
           <h5 class="text-mobileH5 font-text">35 DKK</h5>
         </div>
         <div class="flex justify-between">
-          <!-- <h5 class="text-mobileH5 font-semibold">Mængde</h5> -->
-          <label
-            for="exampleFormControlInput1"
-            class="form-label inline-block font-text text-mobileH5 font-semibold lg:w-[19000px]"
-            >Mængde</label
-          >
-          <input
-            type="number"
-            class="form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="exampleFormControlInput1"
-            placeholder="Eks. 2 stk"
-          />
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Mængde</h5>
+          <div class="flex flex-col items-center pb-space25">
+            <div
+              id="container"
+              class="flex border-green100 border-2 w-[150px] h-[50px] justify-between items-center"
+            >
+              <button
+                class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                id="minus2">-</button
+              >
+              <span
+                class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                id="number2">0</span
+              >
+              <button
+                class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                id="plus2">+</button
+              >
+            </div>
+          </div>
         </div>
         <div class="flex justify-between">
           <h5 class="text-mobileH5 font-text font-semibold">Fjern</h5>
@@ -136,18 +156,17 @@ import "../styles/global.css";
       </div> -->
     </section>
     <section class="hidden lg:block" id="web">
-      <div>
-        <Button
-          variant="primary"
+      <button
+        ><Button
+          variant="thirdy"
           href="/shop"
-          knapTekst="Tilbage til shop"
-          kurv={false}
+          knapTekst="Fortsæt med at handle"
         />
-        <h1 class="text-deskH1 font-bold mt-space50 font-text mb-space30">
-          Kurv
-        </h1>
-        <hr class="h-[2px] mt-space40 mb-space40 bg-orange-300 border-none" />
-      </div>
+      </button>
+      <h1 class="text-deskH1 font-bold mt-space50 font-text mb-space30">
+        Kurv
+      </h1>
+      <hr class="h-[2px] mt-space40 mb-space40 bg-orange-300 border-none" />
       <div class="flex justify-between">
         <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">
@@ -156,17 +175,38 @@ import "../styles/global.css";
           <img class="" src="img/kurvbillede.png" alt="" />
         </div>
         <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Navn</h5>
+          <h5 class="text-deskH5 font-text w-[260px]">
+            Cidrerie de l’Apothicaire Amzer Zo’ Cidrerie de l’Apothicaire Amzer
+            Zo’ Cidrerie de l’Apothicaire Amzer Zo’ Cidrerie de l’Apothicaire
+            Amzer Zo’
+          </h5>
+        </div>
+        <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">Pris</h5>
           <h5 class="text-mobileH5 font-text">455 DKK</h5>
         </div>
         <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">Mængde</h5>
-          <input
-            type="number"
-            class="form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="exampleFormControlInput1"
-            placeholder="Eks. 2 stk"
-          />
+          <div class="flex flex-col items-center pb-space25">
+            <div
+              id="container"
+              class="flex border-green100 border-2 w-[150px] h-[50px] justify-between items-center"
+            >
+              <button
+                class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                id="minus3">-</button
+              >
+              <span
+                class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                id="number3">0</span
+              >
+              <button
+                class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                id="plus3">+</button
+              >
+            </div>
+          </div>
         </div>
         <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">Fjern</h5>
@@ -186,17 +226,38 @@ import "../styles/global.css";
           <img class="" src="img/kurvbillede.png" alt="" />
         </div>
         <div>
+          <h5 class="text-deskH5 font-text font-semibold mb-space20">Navn</h5>
+          <h5 class="text-deskH5 font-text w-[260px]">
+            Cidrerie de l’Apothicaire Amzer Zo’ Cidrerie de l’Apothicaire Amzer
+            Zo’ Cidrerie de l’Apothicaire Amzer Zo’ Cidrerie de l’Apothicaire
+            Amzer Zo’
+          </h5>
+        </div>
+        <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">Pris</h5>
           <h5 class="text-mobileH5 font-text">455 DKK</h5>
         </div>
         <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">Mængde</h5>
-          <input
-            type="number"
-            class="form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="exampleFormControlInput1"
-            placeholder="Eks. 2 stk"
-          />
+          <div class="flex flex-col items-center pb-space25">
+            <div
+              id="container"
+              class="flex border-green100 border-2 w-[150px] h-[50px] justify-between items-center"
+            >
+              <button
+                class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                id="minus4">-</button
+              >
+              <span
+                class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                id="number4">0</span
+              >
+              <button
+                class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                id="plus4">+</button
+              >
+            </div>
+          </div>
         </div>
         <div>
           <h5 class="text-deskH5 font-text font-semibold mb-space20">Fjern</h5>
@@ -247,3 +308,68 @@ import "../styles/global.css";
     </section>
   </main>
 </MainLayout>
+<script>
+  let number = 0;
+
+  const minusButton = document.querySelector("#minus");
+  const plusButton = document.querySelector("#plus");
+  const numberElement = document.querySelector("#number");
+  const minusButton2 = document.querySelector("#minus2");
+  const plusButton2 = document.querySelector("#plus2");
+  const numberElement2 = document.querySelector("#number2");
+  const minusButton3 = document.querySelector("#minus3");
+  const plusButton3 = document.querySelector("#plus3");
+  const numberElement3 = document.querySelector("#number3");
+  const minusButton4 = document.querySelector("#minus4");
+  const plusButton4 = document.querySelector("#plus4");
+  const numberElement4 = document.querySelector("#number4");
+
+  minusButton.addEventListener("click", () => {
+    if (number === 0) {
+      return;
+    }
+    number--;
+    numberElement.textContent = number.toString();
+  });
+
+  plusButton.addEventListener("click", () => {
+    number++;
+    numberElement.textContent = number.toString();
+  });
+  minusButton2.addEventListener("click", () => {
+    if (number === 0) {
+      return;
+    }
+    number--;
+    numberElement2.textContent = number.toString();
+  });
+
+  plusButton2.addEventListener("click", () => {
+    number++;
+    numberElement2.textContent = number.toString();
+  });
+  minusButton3.addEventListener("click", () => {
+    if (number === 0) {
+      return;
+    }
+    number--;
+    numberElement3.textContent = number.toString();
+  });
+
+  plusButton3.addEventListener("click", () => {
+    number++;
+    numberElement3.textContent = number.toString();
+  });
+  minusButton4.addEventListener("click", () => {
+    if (number === 0) {
+      return;
+    }
+    number--;
+    numberElement4.textContent = number.toString();
+  });
+
+  plusButton4.addEventListener("click", () => {
+    number++;
+    numberElement4.textContent = number.toString();
+  });
+</script>
