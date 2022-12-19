@@ -127,14 +127,16 @@ import KategoriButton from "../components/KategoriButton.astro";
     <!-- Modal -->
     <dialog class="modal p-space40 rounded-cornerRound bg-beige400" id="modal">
       <div
-        class="lg:flex max-w-[100%] flex flex-col justify-center lg:flex-col lg:w-[424px] w-[400px]"
+        class="lg:flex lg:flex-col max-w-[100%] flex flex-col justify-centerlg:w-[424px] w-[400px]"
       >
         <div class="w-[424pxpx]">
           <h3 class="text-deskH3 flex justify-center text-green300">
             Tilføjet til kurv
           </h3>
         </div>
-        <div class="lg:flex lg:items-center gap-space30">
+        <div
+          class="lg:flex lg:flex-row lg:items-center place-items-center flex flex-col gap-space30"
+        >
           <div>
             <img
               class="w-[140px] my-space30"
@@ -150,9 +152,25 @@ import KategoriButton from "../components/KategoriButton.astro";
             <h5 class="text-deskH5 font-text">
               <span class="font-text font-bold mr-space10">Pris:</span>140 DKK
             </h5>
-            <h5 class="text-deskH5 font-text">
-              <span class="font-text font-bold mr-space10">Antal:</span>1
-            </h5>
+            <div class="flex flex-col items-center pb-space25">
+              <div
+                id="container"
+                class="flex border-green100 border-2 w-[200px] h-[50px] justify-between items-center"
+              >
+                <button
+                  class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                  id="minus">-</button
+                >
+                <span
+                  class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                  id="number">0</span
+                >
+                <button
+                  class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                  id="plus">+</button
+                >
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -396,4 +414,24 @@ import KategoriButton from "../components/KategoriButton.astro";
       />
     </div>
   </div>
+  <script>
+    let number = 0;
+
+    const minusButton = document.querySelector("#minus");
+    const plusButton = document.querySelector("#plus");
+    const numberElement = document.querySelector("#number");
+
+    minusButton.addEventListener("click", () => {
+      if (number === 0) {
+        return;
+      }
+      number--;
+      numberElement.textContent = number.toString();
+    });
+
+    plusButton.addEventListener("click", () => {
+      number++;
+      numberElement.textContent = number.toString();
+    });
+  </script>
 </MainLayout>
