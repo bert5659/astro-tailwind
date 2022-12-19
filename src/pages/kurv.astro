@@ -133,7 +133,11 @@ import "../styles/global.css";
             hverdage. Gratis afhentning i vores butik på Ørnevej (KBH NV)
           </p>
           <div class="mt-space30">
-            <Button variant="primary" knapTekst="Checkout" />
+            <Button
+              variant="primary"
+              href="/opret_bruger_login"
+              knapTekst="Checkout"
+            />
           </div>
         </div>
       </section>
@@ -156,13 +160,13 @@ import "../styles/global.css";
       </div> -->
     </section>
     <section class="hidden lg:block" id="web">
-      <button
-        ><Button
+      <div class="cursor-pointer">
+        <Button
           variant="thirdy"
           href="/shop"
           knapTekst="Fortsæt med at handle"
         />
-      </button>
+      </div>
       <h1 class="text-deskH1 font-bold mt-space50 font-text mb-space30">
         Kurv
       </h1>
