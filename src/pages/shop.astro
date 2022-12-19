@@ -174,17 +174,17 @@ import KategoriButton from "../components/KategoriButton.astro";
         <div
           class="lg:flex lg:flex-row place-items-center flex flex-col gap-space25"
         >
-          <div class="close-button cursor-pointer">
+          <button class="close-button">
             <Button variant="primary" knapTekst="Køb mere" kurv={false} />
-          </div>
-          <div class="cursor-pointer">
+          </button>
+          <button>
             <Button
               variant="primary"
               href="/kurv"
               knapTekst="Se kurv"
               kurv={true}
             />
-          </div>
+          </button>
         </div>
       </div>
     </dialog>
