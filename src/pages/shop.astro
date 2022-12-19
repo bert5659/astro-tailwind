@@ -33,383 +33,397 @@ import KategoriButton from "../components/KategoriButton.astro";
     </div>
     <img class="" src="/img/shopsplash.webp" alt="splash" />
   </div>
+  <div class="shop_wrapper lg:px-space160 lg:mx-space160">
+    <!-- Kategorier web -->
+    <div id="filter" class="nysticky bg-beige300 lg:w-full flex pt-space30">
+      <div id="toggle-menu2" class="bg-green300 lg:w-full">
+        <ul
+          class="kategorier lg:flex lg: justify-between lg:bg-green300 lg:w-full hidden overflow-visible"
+        >
+          <a
+            class="font-text text-lilac100 bg-green300 p-space15"
+            href="#smagekasser">Smagekasser</a
+          >
+          <a
+            class="font-text text-lilac100 bg-green300 p-space15"
+            href="#fransk">Fransk</a
+          >
+          <a class="font-text text-lilac100 bg-green300 p-space15" href="#dansk"
+            >Dansk</a
+          >
+          <a class="font-text text-lilac100 bg-green300 p-space15" href="#st"
+            >Spansk & Tysk</a
+          >
+          <a
+            class="font-text text-lilac100 bg-green300 p-space15"
+            href="#engelsk">Engelsk</a
+          >
+          <a class="font-text text-lilac100 bg-green300 p-space15" href="#vc"
+            >Vores cider</a
+          >
+          <a
+            class="font-text text-lilac100 bg-green300 p-space15"
+            href="#alkoholfri">Alkoholfri</a
+          >
+        </ul>
+      </div>
+    </div>
 
-  <!-- Kategorier web -->
-  <div id="filter" class="nysticky bg-beige300 pt-space30">
-    <div id="toggle-menu2" class="bg-green300">
-      <ul
-        class="kategorier lg:flex lg:justify-between hidden bg-green300 px-space80 overflow-visible"
-      >
-        <a
-          class="font-text text-lilac100 bg-green300 p-space15"
-          href="#smagekasser">Smagekasser</a
-        >
-        <a class="font-text text-lilac100 bg-green300 p-space15" href="#fransk"
-          >Fransk</a
-        >
-        <a class="font-text text-lilac100 bg-green300 p-space15" href="#dansk"
-          >Dansk</a
-        >
-        <a class="font-text text-lilac100 bg-green300 p-space15" href="#st"
-          >Spansk & Tysk</a
-        >
-        <a class="font-text text-lilac100 bg-green300 p-space15" href="#engelsk"
-          >Engelsk</a
-        >
-        <a class="font-text text-lilac100 bg-green300 p-space15" href="#vc"
-          >Vores cider</a
-        >
-        <a
-          class="font-text text-lilac100 bg-green300 p-space15"
-          href="#alkoholfri">Alkoholfri</a
-        >
+    <!-- Kategorier mobil -->
+    <div
+      id="filtermenu"
+      class="lg:hidden grid nysticky place-content-center py-space20 w-full bg-beige300"
+    >
+      <div id="toggle-filtermenu" class="bg-black">
+        <KategoriButton variant="kategori" knapTekst="Kategorier" />
+      </div>
+      <ul id="filternav2" class="flex">
+        <div class="flex flex-col items-center">
+          <a
+            class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+            href="#smagekasser">Smagekasser</a
+          >
+          <a
+            class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+            href="#fransk">Fransk</a
+          >
+          <a
+            class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+            href="#dansk">Dansk</a
+          >
+          <a
+            class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+            href="#st">Spansk & Tysk</a
+          >
+          <a
+            class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+            href="#engelsk">Engelsk</a
+          >
+          <a
+            class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+            href="#vc">Vores cider</a
+          >
+          <a
+            class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
+            href="#alkoholfri">Alkoholfri</a
+          >
+        </div>
       </ul>
     </div>
-  </div>
+    <button
+      class="totopbutton shadow-lg font-text text-lilac100 w-[100px] bg-green300 p-space1 mt-space90"
+      id="top-button">Return to top</button
+    >
 
-  <!-- Kategorier mobil -->
-  <div
-    id="filtermenu"
-    class="lg:hidden grid nysticky place-content-center py-space20 w-full bg-beige300"
-  >
-    <div id="toggle-filtermenu" class="bg-black">
-      <KategoriButton variant="kategori" knapTekst="Kategorier" />
+    <!-- Smagskasser -->
+    <div id="smagekasser" class="lg:flex lg:flex-col flex flex-col">
+      <!-- Modal -->
+      <dialog
+        class="modal p-space40 rounded-cornerRound bg-beige400"
+        id="modal"
+      >
+        <div
+          class="lg:flex lg:flex-col max-w-[100%] flex flex-col justify-centerlg:w-[424px] w-[400px]"
+        >
+          <div class="w-[424pxpx]">
+            <h3 class="text-deskH3 flex justify-center text-green300">
+              Tilføjet til kurv
+            </h3>
+          </div>
+          <div
+            class="lg:flex lg:flex-row lg:items-center place-items-center flex flex-col gap-space30"
+          >
+            <div>
+              <img
+                class="w-[140px] my-space30"
+                src="../img/produktbilleder/danskkasse_et_pic-100.webp"
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col gap-space30">
+              <h5 class="text-deskH5 font-text">
+                <span class="font-text font-bold mr-space10">Navn:</span
+                >Ciderkasse 12 - stk
+              </h5>
+              <h5 class="text-deskH5 font-text">
+                <span class="font-text font-bold mr-space10">Pris:</span>140 DKK
+              </h5>
+              <div class="flex flex-col items-center pb-space25">
+                <div
+                  id="container"
+                  class="flex border-green100 border-2 w-[200px] h-[50px] justify-between items-center"
+                >
+                  <button
+                    class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
+                    id="minusShop">-</button
+                  >
+                  <span
+                    class="font-bold font-text px-space10 text-mobileH3 text-black500"
+                    id="numberShop">0</span
+                  >
+                  <button
+                    class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
+                    id="plusShop">+</button
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lg:flex lg:flex-row place-items-center flex flex-col gap-space25"
+          >
+            <div class="close-button cursor-pointer">
+              <Button variant="primary" knapTekst="Køb mere" kurv={false} />
+            </div>
+            <div class="cursor-pointer">
+              <Button
+                variant="primary"
+                href="/kurv"
+                knapTekst="Se kurv"
+                kurv={true}
+              />
+            </div>
+          </div>
+        </div>
+      </dialog>
     </div>
-    <ul id="filternav2" class="flex">
-      <div class="flex flex-col items-center">
-        <a
-          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
-          href="#smagekasser">Smagekasser</a
-        >
-        <a
-          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
-          href="#fransk">Fransk</a
-        >
-        <a
-          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
-          href="#dansk">Dansk</a
-        >
-        <a
-          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
-          href="#st">Spansk & Tysk</a
-        >
-        <a
-          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
-          href="#engelsk">Engelsk</a
-        >
-        <a
-          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
-          href="#vc">Vores cider</a
-        >
-        <a
-          class="font-text text-lilac100 w-[279px] bg-green300 p-space15"
-          href="#alkoholfri">Alkoholfri</a
-        >
-      </div>
-    </ul>
-  </div>
-  <button
-    class="totopbutton shadow-lg font-text text-lilac100 w-[100px] bg-green300 p-space1 mt-space90"
-    id="top-button">Return to top</button
-  >
-  <!-- Smagskasser -->
-  <div id="smagekasser" class="lg:flex lg:flex-col flex flex-col">
-    <div class="">
+
+    <!-- <hr class="mb-space50 h-[2px] border-none bg-orange-400" /> -->
+    <div
+      class="flex flex-col w-full items-center justify-center lg:justify-start lg:items-start"
+    >
       <h2
-        class="lg:text-deskH2 text-mobileH2 place-self-center font-text font-bold mt-space20 mb-space30"
+        class="lg:text-deskH2 text-mobileH2 font-text font-bold mt-space20 mb-space30"
       >
         Smagskasser
       </h2>
     </div>
-
-    <!-- Modal -->
-    <dialog class="modal p-space40 rounded-cornerRound bg-beige400" id="modal">
-      <div
-        class="lg:flex lg:flex-col max-w-[100%] flex flex-col justify-centerlg:w-[424px] w-[400px]"
-      >
-        <div class="w-[424pxpx]">
-          <h3 class="text-deskH3 flex justify-center text-green300">
-            Tilføjet til kurv
-          </h3>
-        </div>
-        <div
-          class="lg:flex lg:flex-row lg:items-center place-items-center flex flex-col gap-space30"
-        >
-          <div>
-            <img
-              class="w-[140px] my-space30"
-              src="../img/produktbilleder/danskkasse_et_pic-100.webp"
-              alt=""
-            />
-          </div>
-          <div class="flex flex-col gap-space30">
-            <h5 class="text-deskH5 font-text">
-              <span class="font-text font-bold mr-space10">Navn:</span
-              >Ciderkasse 12 - stk
-            </h5>
-            <h5 class="text-deskH5 font-text">
-              <span class="font-text font-bold mr-space10">Pris:</span>140 DKK
-            </h5>
-            <div class="flex flex-col items-center pb-space25">
-              <div
-                id="container"
-                class="flex border-green100 border-2 w-[200px] h-[50px] justify-between items-center"
-              >
-                <button
-                  class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
-                  id="minusShop">-</button
-                >
-                <span
-                  class="font-bold font-text px-space10 text-mobileH3 text-black500"
-                  id="numberShop">0</span
-                >
-                <button
-                  class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
-                  id="plusShop">+</button
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="lg:flex lg:flex-row place-items-center flex flex-col gap-space25"
-        >
-          <div class="close-button cursor-pointer">
-            <Button variant="primary" knapTekst="Køb mere" kurv={false} />
-          </div>
-          <div class="cursor-pointer">
-            <Button
-              variant="primary"
-              href="/kurv"
-              knapTekst="Se kurv"
-              kurv={true}
-            />
-          </div>
-        </div>
-      </div>
-    </dialog>
-  </div>
-
-  <!-- <hr class="mb-space50 h-[2px] border-none bg-orange-400" /> -->
-  <div class="smage-items">
-    <Card
-      titel="3 fantastiske cidere"
-      producent="Fra danske producenter"
-      pris="DKK 600"
-      pic="danskkasse_et"
-      pic_hovered="danskkasse_info"
-      tilbud={true}
-    />
-    <Card
-      titel="3 vilde cidere"
-      producent="Fra franske producenter"
-      pris="DKK 475"
-      pic="franskkasse_to"
-      pic_hovered="franskkasse_info"
-    />
-    <Card
-      titel="Alkoholfri ciderkasse"
-      producent="Danske og franske"
-      pris="DKK 455"
-      pic="startkasse_tre"
-      pic_hovered="alkoholfri_info"
-    />
-  </div>
-
-  <!-- Fransk -->
-  <div id="fransk" class="items-center lg:flex lg:flex-col flex flex-col">
-    <h2
-      class="lg:text-deskH2 text-mobileH2 place-self-start font-text font-bold mt-space20 mb-space50"
-    >
-      Fransk
-    </h2>
-
     <div class="smage-items">
       <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="fransk_et"
-        pic_hovered="alkoholfri_info"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="fransk_to"
-        udsolgt={true}
-        pic_hovered="alkoholfri_info"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="fransk_tre"
-        pic_hovered="alkoholfri_info"
-      />
-    </div>
-  </div>
-
-  <!-- Dansk -->
-  <div id="dansk" class="items-center lg:flex lg:flex-col flex flex-col">
-    <h2
-      class="lg:text-deskH2 text-mobileH2 place-self-start font-text font-bold mt-space20 mb-space50"
-    >
-      Dansk
-    </h2>
-
-    <div class="smage-items">
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="dansk_et"
-        pic_hovered="alkoholfri_info"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="dansk_to"
-        pic_hovered="alkoholfri_info"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="dansk_tre"
-        pic_hovered="alkoholfri_info"
-      />
-    </div>
-  </div>
-
-  <!-- Spansk & Tyske -->
-  <div id="st" class="items-center lg:flex lg:flex-col flex flex-col">
-    <h2
-      class="lg:text-deskH2 text-mobileH2 place-self-start font-text font-bold mt-space20 mb-space50"
-    >
-      Spansk & Tysk
-    </h2>
-    <div class="smage-items">
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="spansk_et"
-        pic_hovered="alkoholfri_info"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="spansk_to"
-        pic_hovered="alkoholfri_info"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="spansk_tre"
-        pic_hovered="alkoholfri_info"
-      />
-    </div>
-  </div>
-
-  <!-- Engelsk -->
-  <div id="engelsk" class="items-center lg:flex lg:flex-col flex flex-col">
-    <h2
-      class="lg:text-deskH2 text-mobileH2 place-self-start font-text font-bold mt-space20 mb-space50"
-    >
-      Engelsk
-    </h2>
-    <div class="smage-items">
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="england_et"
-        pic_hovered="alkoholfri_info"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="england_to"
-        pic_hovered="alkoholfri_info"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="england_tre"
+        titel="3 fantastiske cidere"
+        producent="Fra danske producenter"
+        pris="DKK 600"
+        pic="danskkasse_et"
+        pic_hovered="danskkasse_info"
         tilbud={true}
+      />
+      <Card
+        titel="3 vilde cidere"
+        producent="Fra franske producenter"
+        pris="DKK 475"
+        pic="franskkasse_to"
+        pic_hovered="franskkasse_info"
+      />
+      <Card
+        titel="Alkoholfri ciderkasse"
+        producent="Danske og franske"
+        pris="DKK 455"
+        pic="startkasse_tre"
         pic_hovered="alkoholfri_info"
       />
     </div>
-  </div>
 
-  <!-- Vores cider -->
-  <div id="vc" class="items-center lg:flex lg:flex-col flex flex-col">
-    <h2
-      class="text-deskH2 place-self-start font-text font-bold mt-space20 mb-space50"
+    <!-- Fransk -->
+    <div
+      id="fransk"
+      class="items-center lg:flex lg:flex-col flex flex-col w-full"
     >
-      Vores cider
-    </h2>
-    <div class="smage-items">
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="vores_et"
-        pic_hovered="alkoholfri_info"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="vores_to"
-        pic_hovered="alkoholfri_info"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="vores_tre"
-        pic_hovered="alkoholfri_info"
-      />
+      <h2
+        class="lg:text-deskH2 text-mobileH2 lg:place-self-start place-self-center font-text font-bold mt-space20 mb-space50"
+      >
+        Fransk
+      </h2>
+
+      <div class="smage-items">
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="fransk_et"
+          pic_hovered="alkoholfri_info"
+        />
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="fransk_to"
+          udsolgt={true}
+          pic_hovered="alkoholfri_info"
+        />
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="fransk_tre"
+          pic_hovered="alkoholfri_info"
+        />
+      </div>
     </div>
-  </div>
 
-  <!-- Alkoholfri -->
-  <div id="alkoholfri" class="items-center lg:flex lg:flex-col flex flex-col">
-    <h2
-      class="lg:text-deskH2 text-mobileH2 place-self-start font-text font-bold mt-space20 mb-space50"
+    <!-- Dansk -->
+    <div
+      id="dansk"
+      class="lg:items-start lg:justify-center items-center justify-center lg:flex lg:flex-col flex flex-col"
     >
-      Alkoholfri
-    </h2>
-    <div class="smage-items">
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="alkoholfri_et"
-        pic_hovered="alkoholfri_info"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="alkoholfri_to"
-        udsolgt={true}
-        pic_hovered="alkoholfri_info"
-      />
-      <Card
-        titel="Cidrerie de l’Apothicaire"
-        producent="Amzer Zo’"
-        pris="DKK 100"
-        pic="alkoholfri_tre"
-        pic_hovered="alkoholfri_info"
-      />
+      <h2
+        class="lg:text-deskH2 text-mobileH2 font-text font-bold mt-space20 mb-space50"
+      >
+        Dansk
+      </h2>
+
+      <div class="smage-items">
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="dansk_et"
+          pic_hovered="alkoholfri_info"
+        />
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="dansk_to"
+          pic_hovered="alkoholfri_info"
+        />
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="dansk_tre"
+          pic_hovered="alkoholfri_info"
+        />
+      </div>
+    </div>
+
+    <!-- Spansk & Tyske -->
+    <div id="st" class="items-center lg:flex lg:flex-col flex flex-col">
+      <h2
+        class="lg:text-deskH2 text-mobileH2 place-self-center lg:place-self-start font-text font-bold mt-space20 mb-space50"
+      >
+        Spansk & Tysk
+      </h2>
+      <div class="smage-items">
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="spansk_et"
+          pic_hovered="alkoholfri_info"
+        />
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="spansk_to"
+          pic_hovered="alkoholfri_info"
+        />
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="spansk_tre"
+          pic_hovered="alkoholfri_info"
+        />
+      </div>
+    </div>
+
+    <!-- Engelsk -->
+    <div id="engelsk" class="items-center lg:flex lg:flex-col flex flex-col">
+      <h2
+        class="lg:text-deskH2 text-mobileH2 place-self-center lg:place-self-start font-text font-bold mt-space20 mb-space50"
+      >
+        Engelsk
+      </h2>
+      <div class="smage-items">
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="england_et"
+          pic_hovered="alkoholfri_info"
+        />
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="england_to"
+          pic_hovered="alkoholfri_info"
+        />
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="england_tre"
+          tilbud={true}
+          pic_hovered="alkoholfri_info"
+        />
+      </div>
+    </div>
+
+    <!-- Vores cider -->
+    <div id="vc" class="items-center lg:flex lg:flex-col flex flex-col">
+      <h2
+        class="lg:text-deskH2 text-mobileH2 place-self-center lg:place-self-start font-text font-bold mt-space20 mb-space50"
+      >
+        Vores cider
+      </h2>
+      <div class="smage-items">
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="vores_et"
+          pic_hovered="alkoholfri_info"
+        />
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="vores_to"
+          pic_hovered="alkoholfri_info"
+        />
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="vores_tre"
+          pic_hovered="alkoholfri_info"
+        />
+      </div>
+    </div>
+
+    <!-- Alkoholfri -->
+    <div id="alkoholfri" class="items-center lg:flex lg:flex-col flex flex-col">
+      <h2
+        class="lg:text-deskH2 text-mobileH2 place-self-center lg:place-self-start font-text font-bold mt-space20 mb-space50"
+      >
+        Alkoholfri
+      </h2>
+      <div class="smage-items">
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="alkoholfri_et"
+          pic_hovered="alkoholfri_info"
+        />
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="alkoholfri_to"
+          udsolgt={true}
+          pic_hovered="alkoholfri_info"
+        />
+        <Card
+          titel="Cidrerie de l’Apothicaire"
+          producent="Amzer Zo’"
+          pris="DKK 100"
+          pic="alkoholfri_tre"
+          pic_hovered="alkoholfri_info"
+        />
+      </div>
     </div>
   </div>
 </MainLayout>
