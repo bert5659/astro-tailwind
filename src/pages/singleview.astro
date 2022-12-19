@@ -109,24 +109,4 @@ import Card from "../components/Card.astro";
       </div>
     </article>
   </section>
-  <script>
-    let number = 0;
-
-    const minusButton = document.querySelector("#minus");
-    const plusButton = document.querySelector("#plus");
-    const numberElement = document.querySelector("#number");
-
-    minusButton.addEventListener("click", () => {
-      if (number === 0) {
-        return;
-      }
-      number--;
-      numberElement.textContent = number.toString();
-    });
-
-    plusButton.addEventListener("click", () => {
-      number++;
-      numberElement.textContent = number.toString();
-    });
-  </script>
 </MainLayout>

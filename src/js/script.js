@@ -6,6 +6,9 @@ const html = document.querySelector("html");
 const body = document.querySelector("body");
 const divMail = document.getElementById("mail_check");
 const divTel = document.getElementById("tel_check");
+const minusButton = document.querySelector("#minus");
+const plusButton = document.querySelector("#plus");
+const numberElement = document.querySelector("#number");
 
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
@@ -41,6 +44,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
       body.style.overflowY = "auto";
     }
   }
+  let number = 0;
+
+  minusButton.addEventListener("click", () => {
+    if (number === 0) {
+      return;
+    }
+    number--;
+    numberElement.textContent = number.toString();
+  });
+
+  plusButton.addEventListener("click", () => {
+    number++;
+    numberElement.textContent = number.toString();
+  });
 });
 
 //Til topppen knap//
