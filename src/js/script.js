@@ -9,6 +9,9 @@ const divTel = document.getElementById("tel_check");
 const minusButton = document.querySelector("#minus");
 const plusButton = document.querySelector("#plus");
 const numberElement = document.querySelector("#number");
+const minusButtonShop = document.querySelector("#minusShop");
+const plusButtonShop = document.querySelector("#plusShop");
+const numberElementShop = document.querySelector("#numberShop");
 const minusButton5 = document.querySelector("#minus5");
 const plusButton5 = document.querySelector("#plus5");
 const numberElement5 = document.querySelector("#number5");
@@ -152,10 +155,6 @@ openModals.forEach((openModal) => {
 closeModal.addEventListener("click", () => {
   modal.close();
 });
-
-const minusButtonShop = document.querySelector("#minusShop");
-const plusButtonShop = document.querySelector("#plusShop");
-const numberElementShop = document.querySelector("#numberShop");
 
 minusButtonShop.addEventListener("click", () => {
   if (number === 0) {
