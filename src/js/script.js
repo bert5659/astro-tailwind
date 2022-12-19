@@ -111,7 +111,6 @@ window.addEventListener("scroll", makeStickyUntilOtherElementIsSticky);
 
 //Modal script
 const modal = document.querySelector("#modal");
-
 const closeModal = document.querySelector(".close-button");
 const openModals = document.querySelectorAll(".open-button");
 
@@ -123,4 +122,23 @@ openModals.forEach((openModal) => {
 
 closeModal.addEventListener("click", () => {
   modal.close();
+});
+
+let number = 0;
+
+const minusButtonShop = document.querySelector("#minusShop");
+const plusButtonShop = document.querySelector("#plusShop");
+const numberElementShop = document.querySelector("#numberShop");
+
+minusButtonShop.addEventListener("click", () => {
+  if (number === 0) {
+    return;
+  }
+  number--;
+  numberElementShop.textContent = number.toString();
+});
+
+plusButtonShop.addEventListener("click", () => {
+  number++;
+  numberElementShop.textContent = number.toString();
 });

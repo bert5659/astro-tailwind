@@ -118,7 +118,7 @@ import KategoriButton from "../components/KategoriButton.astro";
   <div id="smagekasser" class="lg:flex lg:flex-col flex flex-col">
     <div class="">
       <h2
-        class="text-deskH2 place-self-center font-text font-bold mt-space20 mb-space30"
+        class="lg:text-deskH2 text-mobileH2 place-self-center font-text font-bold mt-space20 mb-space30"
       >
         Smagskasser
       </h2>
@@ -140,7 +140,7 @@ import KategoriButton from "../components/KategoriButton.astro";
           <div>
             <img
               class="w-[140px] my-space30"
-              src="img/produktbilleder/danskkasse_et_pic-100.webp"
+              src="../img/produktbilleder/danskkasse_et_pic-100.webp"
               alt=""
             />
           </div>
@@ -159,15 +159,15 @@ import KategoriButton from "../components/KategoriButton.astro";
               >
                 <button
                   class="font-bold minus123 px-space10 border-green100 border-r-2 font-text text-mobileH3 text-black500"
-                  id="minus">-</button
+                  id="minusShop">-</button
                 >
                 <span
                   class="font-bold font-text px-space10 text-mobileH3 text-black500"
-                  id="number">0</span
+                  id="numberShop">0</span
                 >
                 <button
                   class="font-bold px-space10 plus123 border-green100 border-l-2 font-text text-mobileH3 text-black500"
-                  id="plus">+</button
+                  id="plusShop">+</button
                 >
               </div>
             </div>
@@ -221,7 +221,7 @@ import KategoriButton from "../components/KategoriButton.astro";
   <!-- Fransk -->
   <div id="fransk" class="items-center lg:flex lg:flex-col flex flex-col">
     <h2
-      class="text-deskH2 place-self-start font-text font-bold mt-space20 mb-space50"
+      class="lg:text-deskH2 text-mobileH2 place-self-start font-text font-bold mt-space20 mb-space50"
     >
       Fransk
     </h2>
@@ -255,7 +255,7 @@ import KategoriButton from "../components/KategoriButton.astro";
   <!-- Dansk -->
   <div id="dansk" class="items-center lg:flex lg:flex-col flex flex-col">
     <h2
-      class="text-deskH2 place-self-start font-text font-bold mt-space20 mb-space50"
+      class="lg:text-deskH2 text-mobileH2 place-self-start font-text font-bold mt-space20 mb-space50"
     >
       Dansk
     </h2>
@@ -288,7 +288,7 @@ import KategoriButton from "../components/KategoriButton.astro";
   <!-- Spansk & Tyske -->
   <div id="st" class="items-center lg:flex lg:flex-col flex flex-col">
     <h2
-      class="text-deskH2 place-self-start font-text font-bold mt-space20 mb-space50"
+      class="lg:text-deskH2 text-mobileH2 place-self-start font-text font-bold mt-space20 mb-space50"
     >
       Spansk & Tysk
     </h2>
@@ -320,7 +320,7 @@ import KategoriButton from "../components/KategoriButton.astro";
   <!-- Engelsk -->
   <div id="engelsk" class="items-center lg:flex lg:flex-col flex flex-col">
     <h2
-      class="text-deskH2 place-self-start font-text font-bold mt-space20 mb-space50"
+      class="lg:text-deskH2 text-mobileH2 place-self-start font-text font-bold mt-space20 mb-space50"
     >
       Engelsk
     </h2>
@@ -385,7 +385,7 @@ import KategoriButton from "../components/KategoriButton.astro";
   <!-- Alkoholfri -->
   <div id="alkoholfri" class="items-center lg:flex lg:flex-col flex flex-col">
     <h2
-      class="text-deskH2 place-self-start font-text font-bold mt-space20 mb-space50"
+      class="lg:text-deskH2 text-mobileH2 place-self-start font-text font-bold mt-space20 mb-space50"
     >
       Alkoholfri
     </h2>
@@ -414,24 +414,4 @@ import KategoriButton from "../components/KategoriButton.astro";
       />
     </div>
   </div>
-  <script>
-    let number = 0;
-
-    const minusButton = document.querySelector("#minus");
-    const plusButton = document.querySelector("#plus");
-    const numberElement = document.querySelector("#number");
-
-    minusButton.addEventListener("click", () => {
-      if (number === 0) {
-        return;
-      }
-      number--;
-      numberElement.textContent = number.toString();
-    });
-
-    plusButton.addEventListener("click", () => {
-      number++;
-      numberElement.textContent = number.toString();
-    });
-  </script>
 </MainLayout>
