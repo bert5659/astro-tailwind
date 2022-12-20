@@ -103,8 +103,8 @@ header {
 
 @media (max-width: 1200px) {
   header {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     width: 100%;
     margin-left: 0rem;
     margin-right: 0rem;
