@@ -130,7 +130,7 @@ import KategoriButton from "../components/KategoriButton.astro";
         >
           <div class="w-[424pxpx]">
             <h3 class="text-deskH3 flex justify-center text-green300">
-              Tilføjet til kurv
+              Vælg antal
             </h3>
           </div>
           <div
@@ -176,13 +176,17 @@ import KategoriButton from "../components/KategoriButton.astro";
             class="lg:flex lg:flex-row place-items-center flex flex-col gap-space25"
           >
             <div class="close-button cursor-pointer">
-              <Button variant="primary" knapTekst="Køb mere" kurv={false} />
+              <Button
+                variant="primary"
+                knapTekst="Tilføj til kurv"
+                kurv={false}
+              />
             </div>
             <div class="cursor-pointer">
               <Button
                 variant="primary"
                 href="/kurv"
-                knapTekst="Se kurv"
+                knapTekst="Chekout"
                 kurv={true}
               />
             </div>
