@@ -130,17 +130,22 @@ function makeStickyUntilOtherElementIsSticky() {
 window.addEventListener("scroll", makeStickyUntilOtherElementIsSticky);
 
 //Modal script
-
+//Vi lytter på alle knapper med elementer med klassen .open-button
 openModals.forEach((openModal) => {
+  //Vi tilføjer en EventListener og ved klik vises vores modal vindue
   openModal.addEventListener("click", () => {
     modal.showModal();
   });
 });
 
+//Vi lytter efter klik på knappen med klassen .close-button
 closeModal.addEventListener("click", () => {
+  //Ved klik lukkes modal vinduet
   modal.close();
 });
+//Vi lytter efter klik på knappen med klassen .close-button2
 closeModal2.addEventListener("click", () => {
+  //Ved klik lukkes modal vinduet
   modal.close();
 });
 
