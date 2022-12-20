@@ -12,18 +12,7 @@ const numberElement = document.querySelector("#number");
 const minusButtonShop = document.querySelector("#minusShop");
 const plusButtonShop = document.querySelector("#plusShop");
 const numberElementShop = document.querySelector("#numberShop");
-const minusButton5 = document.querySelector("#minus5");
-const plusButton5 = document.querySelector("#plus5");
-const numberElement5 = document.querySelector("#number5");
-const minusButton2 = document.querySelector("#minus2");
-const plusButton2 = document.querySelector("#plus2");
-const numberElement2 = document.querySelector("#number2");
-const minusButton3 = document.querySelector("#minus3");
-const plusButton3 = document.querySelector("#plus3");
-const numberElement3 = document.querySelector("#number3");
-const minusButton4 = document.querySelector("#minus4");
-const plusButton4 = document.querySelector("#plus4");
-const numberElement4 = document.querySelector("#number4");
+
 let number = 0;
 
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -171,53 +160,4 @@ minusButtonShop.addEventListener("click", () => {
 plusButtonShop.addEventListener("click", () => {
   number++;
   numberElementShop.textContent = number.toString();
-});
-
-minusButton5.addEventListener("click", () => {
-  if (number === 0) {
-    return;
-  }
-  number--;
-  numberElement5.textContent = number.toString();
-});
-
-plusButton5.addEventListener("click", () => {
-  number++;
-  numberElement5.textContent = number.toString();
-});
-minusButton2.addEventListener("click", () => {
-  if (number === 0) {
-    return;
-  }
-  number--;
-  numberElement2.textContent = number.toString();
-});
-
-plusButton2.addEventListener("click", () => {
-  number++;
-  numberElement2.textContent = number.toString();
-});
-minusButton3.addEventListener("click", () => {
-  if (number === 0) {
-    return;
-  }
-  number--;
-  numberElement3.textContent = number.toString();
-});
-
-plusButton3.addEventListener("click", () => {
-  number++;
-  numberElement3.textContent = number.toString();
-});
-minusButton4.addEventListener("click", () => {
-  if (number === 0) {
-    return;
-  }
-  number--;
-  numberElement4.textContent = number.toString();
-});
-
-plusButton4.addEventListener("click", () => {
-  number++;
-  numberElement4.textContent = number.toString();
 });
