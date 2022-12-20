@@ -7,13 +7,15 @@ const { variant, href, knapTekst, kurv } = Astro.props;
   data-variant={variant}
   class="font-bold font-dosis cursor-pointer text-white p-2 voresKnap"
   >{
-    kurv == true && (
+    kurv == true &  & (
       <div class="icon">
         <img class="" src="/img/toteicon.svg" alt="tote icon" />
       </div>
     )
   }
-  {knapTekst}
+  <h4 class="font-text text-deskH4">
+    {knapTekst}
+  </h4>
 </a>
 
 <style>
@@ -36,7 +38,6 @@ const { variant, href, knapTekst, kurv } = Astro.props;
     font-size: 32px;
     width: 200px;
     height: 50px;
-    font-size: 18px;
     background-color: #4f7359;
   }
   [data-variant="thirdy"] {
@@ -44,7 +45,7 @@ const { variant, href, knapTekst, kurv } = Astro.props;
     justify-content: center;
     gap: 20px;
     align-items: center;
-    font-size: 18px;
+    font-size: 32px;
     width: 250px;
     height: 50px;
     background-color: #4f7359;
