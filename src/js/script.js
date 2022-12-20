@@ -24,6 +24,16 @@ const numberElement3 = document.querySelector("#number3");
 const minusButton4 = document.querySelector("#minus4");
 const plusButton4 = document.querySelector("#plus4");
 const numberElement4 = document.querySelector("#number4");
+const topButton = document.getElementById("top-button");
+const filtermenu = document.getElementById("filtermenu");
+const toggleButton2 = document.getElementById("toggle-filtermenu");
+const aTags = filtermenu.querySelectorAll("a");
+const stickyElement = document.getElementById("my-header");
+const otherStickyElement = document.getElementById("filter");
+const modal = document.querySelector("#modal");
+const closeModal = document.querySelector(".close-button");
+const closeModal2 = document.querySelector(".close-button2");
+const openModals = document.querySelectorAll(".open-button");
 let number = 0;
 
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -76,86 +86,70 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 //Til topppen knap//
-
-// Get a reference to the button
-const topButton = document.getElementById("top-button");
-
-// Add a click event listener to the button
+// Tilføjer en EventListener til knappen
 topButton.addEventListener("click", function () {
-  // When the button is clicked, scroll to the top of the page
+  // Når knappen trykkes, skroll til toppen af siden
   window.scrollTo(0, 0);
 });
 
-//Mobil knap til kategori drop-down//
+// Mobil knap til kategori drop-down//
 
-// Filternav
-const filtermenu = document.getElementById("filtermenu");
-const toggleButton2 = document.getElementById("toggle-filtermenu");
-
-// Add a click event listener to the togglebutton2
+// Tilføj en EventListener til togglebutton2
 toggleButton2.addEventListener("click", function () {
-  // When the button is clicked, toggle the "collapsed" class on the filtermenu
+  // Når knappen trykkes, toggle "collapsed" klassen på filtermenu
   filtermenu.querySelector("ul").classList.toggle("collapsed");
 });
 
-// Get all the a tags inside the filtermenu
-const aTags = filtermenu.querySelectorAll("a");
+// Hent alle a-tags inde i filtermenu
 
-// Add a click event listener to each a tag
+// Tilføj en EventListener til hvert a-tag
 aTags.forEach(function (aTag) {
   aTag.addEventListener("click", function () {
-    // When the a tag is clicked, toggle the "collapsed" class on the ul
+    // Når a-tag'et trykkes, toggle "collapsed" klassen på ul
     filtermenu.querySelector("ul").classList.toggle("collapsed");
   });
 });
 
-//Nav forsvinder og kategorier bliver sticky//
-
-// First, we get references to the two elements that we want to work with
-var stickyElement = document.getElementById("my-header");
-var otherStickyElement = document.getElementById("filter");
-
-// Next, we define a function that will check if the "otherStickyElement" has reached the top of the viewport
+// Nav forsvinder og kategorier bliver sticky//
+// Vi definerer en funktion, der tjekker om "otherStickyElement" har nået toppen af visningsområdet
 function isOtherStickyElementAtTopOfViewport() {
-  // We use the getBoundingClientRect() method to get the current position and size of the "otherStickyElement"
+  // Vi bruger getBoundingClientRect() metoden til at få den aktuelle position og størrelse af "otherStickyElement"
   var rect = otherStickyElement.getBoundingClientRect();
-
-  // We check if the top of the "otherStickyElement" is at or above the top of the viewport
+  // Vi tjekker om toppen af "otherStickyElement" er ved toppen af visningsområdet
   return rect.top <= 0;
 }
 
-// We define a function that will make the "stickyElement" sticky until the "otherStickyElement" becomes sticky
+// Vi definerer en funktion, der gør "stickyElement" sticky, indtil "otherStickyElement" bliver sticky
 function makeStickyUntilOtherElementIsSticky() {
-  // First, we check if the "otherStickyElement" has reached the top of the viewport
+  // Først tjekker vi om "otherStickyElement" har nået toppen af visningsområdet
   if (isOtherStickyElementAtTopOfViewport()) {
-    // If the "otherStickyElement" is at the top of the viewport, we remove the "sticky" class from the "stickyElement" and add the "visible" class to the "top-button"
+    // Hvis "otherStickyElement" er i toppen af visningsområdet, fjerner vi "sticky" klassen fra "stickyElement" og tilføjer "visible" klassen til "top-button"
     stickyElement.classList.remove("nysticky");
     topButton.classList.add("visible");
   } else {
-    // If the "otherStickyElement" is not at the top of the viewport, we add the "sticky" class to the "stickyElement" and remove the "visible" class from the "top-button"
+    // Hvis "otherStickyElement" ikke er i toppen af visningsområdet, tilføjer vi "sticky" klassen til "stickyElement" og fjerner "visible" klassen fra "top-button"
     stickyElement.classList.add("nysticky");
     topButton.classList.remove("visible");
   }
 }
 
-// Finally, we attach the "makeStickyUntilOtherElementIsSticky" function to the window's "scroll" event
+// Til sidst tilføjer vi "makeStickyUntilOtherElementIsSticky" funktionen til vinduets "scroll" event
 window.addEventListener("scroll", makeStickyUntilOtherElementIsSticky);
 
 //Modal script
-const modal = document.querySelector("#modal");
-const closeModal = document.querySelector(".close-button");
-const closeModal2 = document.querySelector(".close-button2");
-const openModals = document.querySelectorAll(".open-button");
 
 openModals.forEach((openModal) => {
+  //Vi lytter efter klik på alle knapper med klassen .open-button
   openModal.addEventListener("click", () => {
+    //Ved klik vises vores modal vindue
     modal.showModal();
   });
 });
-
+//Vi lytter efter klik på knappen med klassen .close-button i modal vinduet
 closeModal.addEventListener("click", () => {
   modal.close();
 });
+//Vi lytter efter klik på svg'en i øverste venstre hjørne med klassen .close-button2 i modal vinduet
 closeModal2.addEventListener("click", () => {
   modal.close();
 });
