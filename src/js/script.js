@@ -111,23 +111,23 @@ aTags.forEach(function (aTag) {
 });
 
 // Nav forsvinder og kategorier bliver sticky//
-// Vi definerer en funktion, der tjekker om "otherStickyElement" har nået toppen af visningsområdet
+// Vi definerer en funktion, der tjekker om "otherStickyElement" har nået toppen af viewporten
 function isOtherStickyElementAtTopOfViewport() {
   // Vi bruger getBoundingClientRect() metoden til at få den aktuelle position og størrelse af "otherStickyElement"
   var rect = otherStickyElement.getBoundingClientRect();
-  // Vi tjekker om toppen af "otherStickyElement" er ved toppen af visningsområdet
+  // Vi tjekker om toppen af "otherStickyElement" er ved toppen af viewporten
   return rect.top <= 0;
 }
 
 // Vi definerer en funktion, der gør "stickyElement" sticky, indtil "otherStickyElement" bliver sticky
 function makeStickyUntilOtherElementIsSticky() {
-  // Først tjekker vi om "otherStickyElement" har nået toppen af visningsområdet
+  // Først tjekker vi om "otherStickyElement" har nået toppen af viewporten
   if (isOtherStickyElementAtTopOfViewport()) {
-    // Hvis "otherStickyElement" er i toppen af visningsområdet, fjerner vi "sticky" klassen fra "stickyElement" og tilføjer "visible" klassen til "top-button"
+    // Hvis "otherStickyElement" er i toppen af viewporten, fjerner vi "sticky" klassen fra "stickyElement" og tilføjer "visible" klassen til "top-button"
     stickyElement.classList.remove("nysticky");
     topButton.classList.add("visible");
   } else {
-    // Hvis "otherStickyElement" ikke er i toppen af visningsområdet, tilføjer vi "sticky" klassen til "stickyElement" og fjerner "visible" klassen fra "top-button"
+    // Hvis "otherStickyElement" ikke er i toppen af viewporten, tilføjer vi "sticky" klassen til "stickyElement" og fjerner "visible" klassen fra "top-button"
     stickyElement.classList.add("nysticky");
     topButton.classList.remove("visible");
   }
