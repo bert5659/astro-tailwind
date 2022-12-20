@@ -193,7 +193,7 @@ header {
 .logo_full_nav {
   position: absolute;
   bottom: -5%;
-  left: calc(50%);
+  left: calc(15%);
 }
 
 .menu-item-nav-desk {
