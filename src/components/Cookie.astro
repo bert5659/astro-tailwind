@@ -39,7 +39,7 @@
 
   function fjernCookieboks() {
     cookieboks.classList.add("hidden");
-    sessionStorage.setItem("fjerncookieboks", true);
+    sessionStorage.setItem("fjerncookieboks", true.toString());
   }
 
   if (sessionStorage.getItem("fjerncookieboks")) {
