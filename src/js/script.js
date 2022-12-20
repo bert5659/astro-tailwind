@@ -144,6 +144,7 @@ window.addEventListener("scroll", makeStickyUntilOtherElementIsSticky);
 //Modal script
 const modal = document.querySelector("#modal");
 const closeModal = document.querySelector(".close-button");
+const closeModal2 = document.querySelector(".close-button2");
 const openModals = document.querySelectorAll(".open-button");
 
 openModals.forEach((openModal) => {
@@ -153,6 +154,9 @@ openModals.forEach((openModal) => {
 });
 
 closeModal.addEventListener("click", () => {
+  modal.close();
+});
+closeModal2.addEventListener("click", () => {
   modal.close();
 });
 
